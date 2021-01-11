@@ -1,0 +1,11 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	min-height: 100vh;
+	background-color: beige;
+}
+
+.main {
+	flex-grow: 1;
+}
