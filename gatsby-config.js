@@ -3,6 +3,14 @@ module.exports = {
 		title: 'Maciej Glowacki - Portfolio',
 	},
 	plugins: [
+		{
+			resolve: 'gatsby-plugin-material-ui',
+			options: {
+				stylesProvider: {
+					injectFirst: true,
+				},
+			},
+		},
 		'gatsby-plugin-sass',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-react-helmet',
