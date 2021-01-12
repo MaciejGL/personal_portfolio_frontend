@@ -1,0 +1,19 @@
+.nav {
+	padding: 1rem;
+	display: flex;
+	justify-content: flex-end;
+	@media (min-width: 960px) {
+		padding-right: 4rem;
+	}
+}
+
+.title {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.hamburger {
+	background-color: transparent;
+	color: inherit;
+	cursor: pointer;
+}

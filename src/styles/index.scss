@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+
 :root {
 	scroll-behavior: smooth;
+	// Accent Colors
+	--primary-color: #0d1321;
+	--secondary-color: #c16200;
+	--error-color: #710000;
+	// --warning-color: #c8b94a;
+	--success-color: #5d9c60;
+	--text-primary-color: #0d1321;
+	--text-secondary-color: #161925;
+	--text-disabled-color: #4e5559;
+	// --focus-color: #d38e0f;
+	// --focus-color-light: #d38e0f;
+	// Background Colors
+	--light-bgc: #fdfffc;
+	--dark-bgc: #121212;
 }
 * {
 	border: 0;
@@ -13,7 +28,7 @@
 	text-rendering: optimizeLegibility;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	z-index: 99;
+	// z-index: 99;
 	position: relative;
 }
 html {
@@ -47,4 +62,8 @@ a {
 }
 a:hover {
 	cursor: pointer;
+}
+
+p {
+	color: var(--text_primary-color);
 }

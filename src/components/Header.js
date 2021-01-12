@@ -1,17 +1,16 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import scrollTo from 'gatsby-plugin-smoothscroll';
+
 // Components
+import Navigation from './Navigation/Navigation';
+import { Paper, Card } from '@material-ui/core';
+
+// Styles
+import classes from './Header.module.scss';
 
 const Header = () => {
 	return (
-		<header>
-			<nav>
-				<Link to="#top">Home</Link>
-				<Link to="#about-me">About Me</Link>
-				<Link to="#portfolio">Portfolio</Link>
-				<Link to="#contact">Contact</Link>
-			</nav>
+		<header className={classes.header}>
+			<Navigation />
 		</header>
 	);
 };
