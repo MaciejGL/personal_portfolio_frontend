@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 // Components
 import { Drawer, Divider, useMediaQuery } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Menu, Close } from '@material-ui/icons';
 import Links from './Links/Links';
 import { Spin as Hamburger } from 'hamburger-react';
 
@@ -13,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
 	DrawerRoot: {
 		'&.MuiDrawer-paper': {
 			width: '66%',
-			maxWidth: '400px',
+			maxWidth: '300px',
+			height: '100%',
 		},
 	},
 }));
@@ -36,9 +36,8 @@ const Navigation = () => {
 				</>
 			)}
 			{matches && (
-				<Drawer classes={{ paper: MuiClasses.DrawerRoot }} open={isOpen} onClose={() => setOpen(false)}>
+				<Drawer anchor="left" classes={{ paper: MuiClasses.DrawerRoot }} open={isOpen} onClose={() => setOpen(false)}>
 					<Links handleDrawer={setOpen} />
-					<Divider />
 				</Drawer>
 			)}
 		</nav>

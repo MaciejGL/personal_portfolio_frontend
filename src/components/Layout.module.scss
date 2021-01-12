@@ -1,9 +1,11 @@
 .wrapper {
 	display: flex;
 	flex-direction: column;
+	justify-content: stretch;
 	min-height: 100vh;
 }
 
 .main {
+	display: flex;
 	flex-grow: 1;
 }

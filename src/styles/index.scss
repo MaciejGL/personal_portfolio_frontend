@@ -3,19 +3,18 @@
 :root {
 	scroll-behavior: smooth;
 	// Accent Colors
-	--primary-color: #0d1321;
-	--secondary-color: #c16200;
+	--primary-color: #292826;
+	--secondary-color: #998b6c;
+	--contrast: #a9a393;
 	--error-color: #710000;
-	// --warning-color: #c8b94a;
 	--success-color: #5d9c60;
-	--text-primary-color: #0d1321;
-	--text-secondary-color: #161925;
+	--text-primary-color: #292826;
+	--text-primary-color-light: #474643;
+	--text-secondary-color: #5f5747;
 	--text-disabled-color: #4e5559;
-	// --focus-color: #d38e0f;
-	// --focus-color-light: #d38e0f;
 	// Background Colors
-	--light-bgc: #fdfffc;
-	--dark-bgc: #121212;
+	--light-bgc: #fff3d1;
+	--dark-bgc: #292826;
 }
 * {
 	border: 0;
@@ -36,7 +35,7 @@ html {
 	min-height: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	font-size: 62.5%;
+	// font-size: 62.5%;
 	line-height: 1.5;
 	padding: 0;
 	margin: 0;
@@ -49,7 +48,7 @@ body {
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
-	font-size: 1.6rem;
+	// font-size: 1.6rem;
 	overscroll-behavior-y: none;
 	-webkit-overflow-scrolling: touch;
 	font-family: 'Lato', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif', '"Apple Color Emoji"',
@@ -66,4 +65,8 @@ a:hover {
 
 p {
 	color: var(--text_primary-color);
+}
+
+span.contrast {
+	color: var(--contrast);
 }
