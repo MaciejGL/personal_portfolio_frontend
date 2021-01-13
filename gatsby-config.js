@@ -24,6 +24,22 @@ module.exports = {
 			},
 		},
 		{
+			resolve: 'gatsby-source-strapi',
+			options: {
+				apiURL: process.env.CMS_URL,
+				contentTypes: [
+					// List of the Content Types you want to be able to request from Gatsby.
+					'project',
+					'stack-language',
+					'stack-frontend',
+					'stack-backend',
+					'stack-tools',
+					'stack-other',
+				],
+				queryLimit: 1000,
+			},
+		},
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'images',
