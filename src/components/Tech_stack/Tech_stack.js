@@ -1,17 +1,60 @@
 import React from 'react';
-
+import { useStaticQuery, graphql } from 'gatsby';
 // Components
-import { Typography } from '@material-ui/core';
+import { Typography, Paper } from '@material-ui/core';
 import Badge from './Badge';
 // Styles
+import { makeStyles } from '@material-ui/core/styles';
 import classes from './Tech_stack.module.scss';
 
-const Tech_stack = () => {
-	const languages = [{ name: 'JavaScript', iconClass: 'devicon-javascript-plain colored' }];
-	const frontend = [{ name: 'React', iconClass: 'devicon-react-original-wordmark colored' }];
-	const backend = [];
-	const tools = [];
+const useStyles = makeStyles((theme) => ({
+	paper: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		margin: '20px',
+		width: '300px',
+	},
+	paper_container: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		margin: '20px',
+		maxWidth: '1000px',
+	},
+}));
 
+const Tech_stack = () => {
+	const { allStrapiStackLanguages, allStrapiStackFrontends, allStrapiStackBackends, allStrapiStackTools } = useStaticQuery(graphql`
+		query MyQuery {
+			allStrapiStackFrontends {
+				nodes {
+					name
+					iconClass
+				}
+			}
+			allStrapiStackLanguages {
+				nodes {
+					name
+					iconClass
+				}
+			}
+
+			allStrapiStackBackends {
+				nodes {
+					name
+					iconClass
+				}
+			}
+
+			allStrapiStackTools {
+				nodes {
+					name
+					iconClass
+				}
+			}
+		}
+	`);
+	const classes_Mui = useStyles();
+	// console.log(data);
 	const badgeGenerator = (arr, Comp) => arr.map((el) => <Comp badge={el} />);
 	return (
 		<div>
@@ -22,24 +65,38 @@ const Tech_stack = () => {
 				Through last years I've touched many diffrent technologies. Most of my focus is around Javascript. Below You'll find a list of my crucial Tech Stack.
 				But there is more :)
 			</Typography>
-			<table className={classes.table}>
+			{/* <table className={classes.table}>
 				<tr>
 					<th>Languages:</th>
-					<td>{badgeGenerator(languages, Badge)}</td>
+					<td className={classes.td}>{badgeGenerator(allStrapiStackLanguages.nodes, Badge)}</td>
 				</tr>
 				<tr>
 					<th>Frontend:</th>
-					<td>{badgeGenerator(frontend, Badge)}</td>
+					<td className={classes.td}>{badgeGenerator(allStrapiStackFrontends.nodes, Badge)}</td>
 				</tr>
 				<tr>
 					<th>Backend:</th>
-					<td>{badgeGenerator(backend, Badge)}</td>
+					<td className={classes.td}>{badgeGenerator(allStrapiStackBackends.nodes, Badge)}</td>
 				</tr>
 				<tr>
 					<th>Tools:</th>
-					<td>{badgeGenerator(tools, Badge)}</td>
+					<td className={classes.td}>{badgeGenerator(allStrapiStackTools.nodes, Badge)}</td>
 				</tr>
-			</table>
+			</table> */}
+			<Paper className={classes_Mui.paper_container}>
+				<Paper className={classes_Mui.paper} elevation="3">
+					{badgeGenerator(allStrapiStackLanguages.nodes, Badge)}
+				</Paper>
+				<Paper className={classes_Mui.paper} elevation="3">
+					{badgeGenerator(allStrapiStackFrontends.nodes, Badge)}
+				</Paper>
+				<Paper className={classes_Mui.paper} elevation="3">
+					{badgeGenerator(allStrapiStackBackends.nodes, Badge)}
+				</Paper>
+				<Paper className={classes_Mui.paper} elevation="3">
+					{badgeGenerator(allStrapiStackTools.nodes, Badge)}
+				</Paper>
+			</Paper>
 		</div>
 	);
 };

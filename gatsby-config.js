@@ -30,11 +30,10 @@ module.exports = {
 				contentTypes: [
 					// List of the Content Types you want to be able to request from Gatsby.
 					'project',
-					'stack-language',
-					'stack-frontend',
-					'stack-backend',
+					'stack-languages',
+					'stack-frontends',
+					'stack-backends',
 					'stack-tools',
-					'stack-other',
 				],
 				queryLimit: 1000,
 			},
