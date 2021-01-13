@@ -1,5 +1,5 @@
 import React from 'react';
-import scrollTo from 'gatsby-plugin-smoothscroll';
+// import scrollTo from 'gatsby-plugin-smoothscroll';
 
 // Components
 import { Box, Button, Card, Paper, Typography } from '@material-ui/core';

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import img_AI from '../../images/ai.png';
 import { Typography } from '@material-ui/core';
 
 // Styles
