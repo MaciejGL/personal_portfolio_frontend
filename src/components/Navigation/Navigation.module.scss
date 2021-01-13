@@ -7,7 +7,9 @@
 	justify-content: flex-end;
 	z-index: 2000;
 	@media (min-width: 960px) {
-		padding-right: 4rem;
+		position: relative;
+		justify-content: stretch;
+		padding: 0;
 	}
 }
 

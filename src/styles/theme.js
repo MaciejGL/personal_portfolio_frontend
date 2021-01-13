@@ -32,7 +32,6 @@ export const theme = (isDarkMode) =>
 			h1: {
 				margin: '1rem 0',
 				fontSize: '3rem',
-				// textAlign: 'center',
 			},
 			h2: {
 				margin: '1rem 0',

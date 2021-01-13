@@ -20,28 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 const About_me = () => {
 	const classes_Mui = useStyles();
-	return (
-		<div className={classes.about_me_container} id="about_me">
-			<Button className={classes.btn} onClick={() => scrollTo('#about_me')}>
-				Hey check here!
-			</Button>
-			<Box>
-				<img className={classes.image} src={ProfilePicture} alt="Maciej Glowacki" />
-				<Typography variant="h1">Who am I?</Typography>
-				<Box>
-					<Typography variant="body1">I'm a 21-year-old student at Purdue University currently studying web development and design.</Typography>
-					<Typography variant="body1">
-						As I've grown as a developer, I've worked alongside senior designers and developers who have raised my standards for whats expected of any web
-						application.
-					</Typography>
-					<Typography variant="body1">
-						Through these experiences, I've had the opportunity to create memorable products that are not only enjoyable to use but are written in code that's
-						maintainable and easy to understand.
-					</Typography>
-				</Box>
-			</Box>
-		</div>
-	);
+	return <div className={classes.about_me_container} id="about_me"></div>;
 };
 
 export default About_me;
