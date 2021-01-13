@@ -18,6 +18,12 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		`gatsby-plugin-smoothscroll`,
 		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				plugins: ['gatsby-remark-lottie'],
+			},
+		},
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'images',
