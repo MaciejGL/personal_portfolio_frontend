@@ -7,7 +7,7 @@ export const theme = (isDarkMode) =>
 			secondary: { main: '#3570CA' },
 			contrast: { main: '#2AB987' },
 			text_primary: { main: '#292826' },
-			text_secondary: { main: '#808080' },
+			text_secondary: { main: '#696969' },
 			type: isDarkMode ? 'dark' : 'light',
 			background: {
 				default: isDarkMode ? '#292826' : '#fff',
@@ -44,6 +44,10 @@ export const theme = (isDarkMode) =>
 			h4: {
 				fontSize: '1.8rem',
 				fontWeight: 300,
+			},
+			body1: {
+				color: '#696969',
+				lineHeight: 1.8,
 			},
 		},
 		zIndex: {
