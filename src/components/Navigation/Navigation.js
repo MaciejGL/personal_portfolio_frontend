@@ -4,6 +4,7 @@ import { Drawer, Divider, useMediaQuery } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Links from './Links/Links';
 import { Spin as Hamburger } from 'hamburger-react';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 // Style
 import classes from './Navigation.module.scss';
@@ -14,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
 			width: '66%',
 			maxWidth: '300px',
 			height: '100%',
+			justifyContent: 'space-between',
 		},
 	},
 }));
@@ -36,6 +38,9 @@ const Navigation = () => {
 			{matches && (
 				<Drawer anchor="left" classes={{ paper: MuiClasses.DrawerRoot }} open={isOpen} onClose={() => setOpen(false)}>
 					<Links handleDrawer={setOpen} />
+					<div className={classes.social_media_centered}>
+						<SocialMedia />
+					</div>
 				</Drawer>
 			)}
 		</nav>

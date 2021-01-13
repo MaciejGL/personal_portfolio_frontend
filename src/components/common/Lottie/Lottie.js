@@ -9,7 +9,7 @@ const CustomizedLottie = ({ animation, options, height, width }) => {
 		animationData: animation,
 	};
 
-	return <Lottie options={options ? options : defaultOptions} height={height ? height : 600} width={width ? width : 600} />;
+	return <Lottie options={options ? options : defaultOptions} height={height && height} width={width && width} />;
 };
 
 CustomizedLottie.propTypes = {

@@ -3,9 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import { Typography } from '@material-ui/core';
-import animation from '../assets/laptop-working.json';
-import { Facebook, GitHub, LinkedIn } from '@material-ui/icons';
+import laptop_working from '../assets/laptop-working.json';
 import Lottie from '../common/Lottie/Lottie';
+import SocialMedia from '../SocialMedia/SocialMedia';
+
 // Styles
 import classes from './Welcome.module.scss';
 
@@ -21,21 +22,14 @@ const Welcome = () => {
 	return (
 		<div className={classes.welcome_container}>
 			<div className={classes.animation_container}>
-				<Lottie animation={animation} />
+				<Lottie animation={laptop_working} />
 			</div>
 			<div className={classes.text_container}>
-				<div className={classes.social_media_container}>
-					<div className={classes.line}></div>
-					<GitHub />
-					<Facebook />
-					<LinkedIn />
-				</div>
+				<SocialMedia line />
 				<Typography className={classes_Mui.textAlign} variant="h3">
-					Hello there, I'm <span className="contrast">M</span>aciej
+					Hello there, I'm Mats.
 				</Typography>
-				<Typography variant="h4">
-					Fullstack <span className="contrast">J</span>avaScript <span className="contrast">D</span>eveloper
-				</Typography>
+				<Typography variant="h4">Fullstack JavaScript Developer</Typography>
 			</div>
 		</div>
 	);
