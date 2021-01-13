@@ -31,9 +31,7 @@ const Navigation = () => {
 					<Hamburger rounded toggled={isOpen} toggle={setOpen} />
 				</div>
 			) : (
-				<>
-					<Links />
-				</>
+				<Links />
 			)}
 			{matches && (
 				<Drawer anchor="left" classes={{ paper: MuiClasses.DrawerRoot }} open={isOpen} onClose={() => setOpen(false)}>

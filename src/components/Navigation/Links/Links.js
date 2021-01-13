@@ -33,7 +33,7 @@ const Links = (props) => {
 			{links.map((el) => (
 				<Link key={el.title} to={el.path} activeClassName={classes.activeLink} onClick={() => props.handleDrawer && props.handleDrawer(false)}>
 					<div className={classes['inner_text']}>
-						{el.icon}
+						{matches && el.icon}
 						<Typography variant="subtitle1">{el.title}</Typography>
 					</div>
 					{matches && <Divider />}

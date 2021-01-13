@@ -26,7 +26,6 @@ const Welcome = () => {
 					Fullstack <span className="contrast">J</span>avaScript <span className="contrast">D</span>eveloper
 				</Typography>
 			</div>
-			<img className={classes.background_image} src={img_AI} alt="background" />
 		</div>
 	);
 };
