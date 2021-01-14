@@ -13,8 +13,10 @@
 }
 
 .icon_container {
-	padding: 0 15px;
-	text-align: center;
+	& a {
+		padding: 0 15px;
+		text-align: center;
+	}
 	& svg {
 		vertical-align: middle;
 		font-size: 30px;

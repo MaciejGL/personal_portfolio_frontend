@@ -1,8 +1,7 @@
 import React from 'react';
-// import scrollTo from 'gatsby-plugin-smoothscroll';
 
 // Components
-import { Box, Button, Card, Paper, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import ProfilePicture from '../../images/profile_rounded.png';
 
 // Styles
@@ -10,13 +9,9 @@ import classes from './About_me.module.scss';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-	paper: {
-		width: '180px',
-		height: '180px',
-		borderRadius: '50%',
-	},
 	paragraph: {
 		margin: '25px 0',
+		color: 'white',
 	},
 }));
 

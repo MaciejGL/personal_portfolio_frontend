@@ -27,6 +27,10 @@ const Welcome = () => {
 				<Lottie animation={laptop_working} />
 			</div>
 			<div className={classes.text_container}>
+				<div className={classes.background_chevrons}>
+					<ChevronLeftRounded />
+					<ChevronRightRounded />
+				</div>
 				<SocialMedia line />
 				<Typography className={classes_Mui.h3} variant="h3" component="h1">
 					Hi there, I'm Mats.
@@ -34,10 +38,6 @@ const Welcome = () => {
 				<Typography className={classes_Mui.h3} variant="h3" component="h1">
 					Fullstack JavaScript <span className="contrast">Developer</span>
 				</Typography>
-				<div className={classes.background_chevrons}>
-					<ChevronLeftRounded />
-					<ChevronRightRounded />
-				</div>
 			</div>
 		</div>
 	);
