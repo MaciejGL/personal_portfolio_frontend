@@ -40,12 +40,18 @@ const Badges_container = () => {
 				nodes {
 					name
 					iconClass
+					img {
+						publicURL
+					}
 				}
 			}
 			allStrapiStackBackends {
 				nodes {
 					name
 					iconClass
+					img {
+						publicURL
+					}
 				}
 			}
 
@@ -53,6 +59,9 @@ const Badges_container = () => {
 				nodes {
 					name
 					iconClass
+					img {
+						publicURL
+					}
 				}
 			}
 		}
