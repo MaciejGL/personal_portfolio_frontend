@@ -1,0 +1,25 @@
+.social_media_container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.line {
+	margin-right: 20px;
+	height: 2px;
+	width: 100%;
+	max-width: 144px;
+	background-color: var(--text-secondary-color);
+}
+
+.icon_container {
+	& a {
+		padding: 0 15px;
+		text-align: center;
+	}
+	& svg {
+		vertical-align: middle;
+		font-size: 30px;
+		color: var(--text-secondary-color);
+	}
+}

@@ -3,16 +3,15 @@ import { createMuiTheme } from '@material-ui/core/styles';
 export const theme = (isDarkMode) =>
 	createMuiTheme({
 		palette: {
-			primary: { main: '#292826' },
-			secondary: { main: '#998B6C' },
-			error: { main: '#710000' },
-			contrast: { main: '#A9A393' },
+			primary: { main: '#335AC0' },
+			secondary: { main: '#3570CA' },
+			contrast: { main: '#2AB987' },
 			text_primary: { main: '#292826' },
-			text_secondary: { main: '#5F5747' },
+			text_secondary: { main: '#696969' },
 			type: isDarkMode ? 'dark' : 'light',
 			background: {
-				default: isDarkMode ? '#292826' : '#FFF3D1',
-				paper: isDarkMode ? '#292826' : '#FFF3D1',
+				default: isDarkMode ? '#292826' : '#fff',
+				paper: isDarkMode ? '#292826' : '#fff',
 			},
 		},
 		typography: {
@@ -45,6 +44,10 @@ export const theme = (isDarkMode) =>
 			h4: {
 				fontSize: '1.8rem',
 				fontWeight: 300,
+			},
+			body1: {
+				color: '#696969',
+				lineHeight: 1.8,
 			},
 		},
 		zIndex: {

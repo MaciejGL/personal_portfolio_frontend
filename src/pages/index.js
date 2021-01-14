@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
 // Components
 import Layout from '../components/Layout';
@@ -12,6 +13,9 @@ import classes from '../styles/IndexPage.module.scss';
 const IndexPage = () => {
 	return (
 		<Layout>
+			<Helmet>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.8.2/devicon.min.css" />
+			</Helmet>
 			<div className={classes.homepage_container}>
 				<Welcome />
 				<About_me />

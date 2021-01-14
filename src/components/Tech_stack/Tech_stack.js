@@ -1,14 +1,15 @@
 import React from 'react';
 
 // Components
-import { Typography } from '@material-ui/core';
+import Badges_container from '../Badge/Badges_container';
 
-const Tech_stack = () => {
-	return (
-		<div>
-			<Typography> Tech Stack</Typography>
-		</div>
-	);
-};
+// Styles
+import classes from './Tech_stack.module.scss';
+
+const Tech_stack = () => (
+	<div className={classes.tech_stack_container}>
+		<Badges_container />
+	</div>
+);
 
 export default Tech_stack;

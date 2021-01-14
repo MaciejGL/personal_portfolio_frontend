@@ -7,6 +7,7 @@ import { Paper } from '@material-ui/core';
 import classes from './Layout.module.scss';
 
 const Layout = (props) => {
+	console.log(process.env.CMS_URL);
 	return (
 		<Paper square className={classes.wrapper}>
 			<Header />
