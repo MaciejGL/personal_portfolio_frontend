@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+
+:root {
+	scroll-behavior: smooth;
+	// Accent Colors
+	--primary-color: #335ac0;
+	--secondary-color: #d9e6f5;
+	--contrast: #2ab987;
+	--error-color: #710000;
+	--success-color: #5d9c60;
+	--text-primary-color: #292826;
+	--text-secondary-color: #808080;
+	--text-disabled-color: #4e5559;
+	// Background Colors
+	--light-bgc: #fff;
+	--dark-bgc: #292826;
+}
 * {
 	border: 0;
 	box-sizing: inherit;
@@ -9,7 +26,6 @@
 	text-rendering: optimizeLegibility;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	z-index: 99;
 	position: relative;
 }
 html {
@@ -17,22 +33,22 @@ html {
 	min-height: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	font-size: 62.5%;
 	line-height: 1.5;
 	padding: 0;
 	margin: 0;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	font-family: 'droid-sans-mono', 'bebas-neue-by-fontfabric', monospace;
+	font-family: 'Lato', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif', '"Apple Color Emoji"',
+		'"Segoe UI Emoji"', '"Segoe UI Symbol"';
 }
 
 body {
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
-	font-size: 1.6rem;
 	overscroll-behavior-y: none;
 	-webkit-overflow-scrolling: touch;
-	font-family: 'droid-sans-mono', 'bebas-neue-by-fontfabric', monospace;
+	font-family: 'Lato', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif', '"Apple Color Emoji"',
+		'"Segoe UI Emoji"', '"Segoe UI Symbol"';
 }
 
 a {
@@ -41,4 +57,12 @@ a {
 }
 a:hover {
 	cursor: pointer;
+}
+
+p {
+	color: var(--text_primary-color);
+}
+
+span.contrast {
+	color: var(--contrast);
 }
