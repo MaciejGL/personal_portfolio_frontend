@@ -1,13 +1,12 @@
 .social_media_container {
 	display: flex;
 	align-items: center;
-	margin-bottom: 20px;
 }
 
 .line {
 	margin-right: 20px;
 	height: 2px;
-	width: 100%;
+	width: 144px;
 	max-width: 144px;
 	background-color: var(--text-secondary-color);
 }

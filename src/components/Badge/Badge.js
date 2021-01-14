@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import { Typography } from '@material-ui/core';
@@ -15,6 +16,10 @@ const Badge = ({ badge }) => {
 			</Typography>
 		</div>
 	);
+};
+
+Badge.propTypes = {
+	badge: PropTypes.object.isRequired,
 };
 
 export default Badge;

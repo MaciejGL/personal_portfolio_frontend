@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 });
 const Badge_column = ({ nodes, context }) => {
 	const classes_Mui = useStyles();
-	const badgeGenerator = (arr, Comp) => arr.map((el) => <Comp badge={el} />);
+	const badgeGenerator = (arr, Comp) => arr.map((el) => <Comp key={el.name} badge={el} />);
 
 	return (
 		<div className={classes.badge_column_container}>
