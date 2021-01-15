@@ -25,18 +25,12 @@ const Timeline = () => {
 						github_repository_frontend
 						live_preview
 						Status
-						icon {
-							name
-							image {
-								publicURL
-							}
-						}
 					}
 				}
 			}
 		}
 	`);
-
+	console.log(allStrapiProject.edges);
 	const timeline_elements = allStrapiProject.edges.map((project) => (
 		<VerticalTimelineElement
 			key={project.node.name}
