@@ -4,7 +4,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 // Component
 import { Typography, Paper, Button, useMediaQuery, useTheme } from '@material-ui/core';
 import { KeyboardArrowUp } from '@material-ui/icons';
-import SocialMedia from './SocialMedia/SocialMedia';
+import SocialMedia from './common/SocialMedia/SocialMedia';
 
 // Styles
 import { useStyles } from '../styles/mui_styles';

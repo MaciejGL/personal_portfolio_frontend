@@ -2,12 +2,12 @@ import React from 'react';
 
 // Components
 import Layout from '../components/Layout';
-import { Typography } from '@material-ui/core';
+import Timeline from '../components/Portfolio/Timeline/Timeline';
 
 const portfolio = () => {
 	return (
 		<Layout>
-			<Typography variant="h1">Portfolio</Typography>
+			<Timeline />
 		</Layout>
 	);
 };

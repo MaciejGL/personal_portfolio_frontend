@@ -2,7 +2,7 @@ import React from 'react';
 
 // Components
 import { Typography } from '@material-ui/core';
-import ProfilePicture from '../../images/profile_rounded.png';
+import ProfilePicture from '../../../images/profile_rounded.png';
 
 // Styles
 import classes from './About_me.module.scss';
