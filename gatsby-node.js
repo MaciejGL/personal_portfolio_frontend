@@ -23,7 +23,6 @@ exports.createPages = async ({ graphql, actions }) => {
 		console.log('Error retrieving strapi data', errors);
 	}
 	const projectTemplate = path.resolve('./src/templates/project.js');
-	console.log(data.allStrapiProject.edges);
 	data.allStrapiProject.edges.forEach((edge) => {
 		const slug = edge.node.title.replace(/ /g, '').toLowerCase();
 		createPage({

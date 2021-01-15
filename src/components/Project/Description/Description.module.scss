@@ -1,0 +1,21 @@
+.project_description {
+	margin: 70px auto 0;
+	padding: 20px;
+	width: 100%;
+	max-width: 1200px;
+	@media (min-width: 840px) {
+		width: 80%;
+	}
+}
+
+.tech_info_container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 350px;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+}
