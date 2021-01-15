@@ -4,15 +4,15 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 // Component
 import { Typography, Paper, Button, useMediaQuery, useTheme } from '@material-ui/core';
 import { KeyboardArrowUp } from '@material-ui/icons';
-import SocialMedia from './SocialMedia/SocialMedia';
+import SocialMedia from './common/SocialMedia/SocialMedia';
 
 // Styles
-import { useStyles } from '../styles/mui_styles';
+import { useStyles_Footer } from '../styles/mui_styles';
 
 const Footer = () => {
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
-	const classes_Mui = useStyles();
+	const classes_Mui = useStyles_Footer();
 
 	const ScrollTopComp = !matches && (
 		<Button className={classes_Mui.btn_scroll_top} onClick={() => scrollTo('#top')} startIcon={<KeyboardArrowUp />}>

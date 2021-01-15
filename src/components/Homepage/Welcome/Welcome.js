@@ -1,25 +1,18 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import { Typography } from '@material-ui/core';
-import laptop_working from '../assets/laptop-working.json';
-import Lottie from '../common/Lottie/Lottie';
-import SocialMedia from '../SocialMedia/SocialMedia';
+import laptop_working from '../../assets/laptop-working.json';
+import Lottie from '../../common/Lottie/Lottie';
+import SocialMedia from '../../common/SocialMedia/SocialMedia';
 import { ChevronLeftRounded, ChevronRightRounded } from '@material-ui/icons';
 
 // Styles
 import classes from './Welcome.module.scss';
-
-const useStyles = makeStyles((theme) => ({
-	h3: {
-		margin: '10px 0',
-		fontWeight: 400,
-	},
-}));
+import { useStyles_Homepage } from '../../../styles/mui_styles';
 
 const Welcome = () => {
-	const classes_Mui = useStyles();
+	const classes_Mui = useStyles_Homepage();
 
 	return (
 		<div className={classes.welcome_container}>

@@ -1,30 +1,19 @@
 import React, { useState } from 'react';
 // Components
-import { Drawer, useMediaQuery } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Drawer, useMediaQuery, useTheme } from '@material-ui/core';
 import Links from './Links/Links';
 import { Spin as Hamburger } from 'hamburger-react';
-import SocialMedia from '../SocialMedia/SocialMedia';
+import SocialMedia from '../common/SocialMedia/SocialMedia';
 
 // Style
 import classes from './Navigation.module.scss';
-
-const useStyles = makeStyles((theme) => ({
-	DrawerRoot: {
-		'&.MuiDrawer-paper': {
-			width: '66%',
-			maxWidth: '300px',
-			height: '100%',
-			justifyContent: 'space-between',
-		},
-	},
-}));
+import { useStyles_Navigation } from '../../styles/mui_styles';
 
 const Navigation = () => {
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 	const [isOpen, setOpen] = useState(false);
-	const MuiClasses = useStyles();
+	const MuiClasses = useStyles_Navigation();
 
 	return (
 		<nav className={classes.nav}>

@@ -2,38 +2,16 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 // Components
-import { Divider, Paper, useMediaQuery } from '@material-ui/core';
+import { Divider, Paper, useMediaQuery, useTheme } from '@material-ui/core';
 import Badge_column from './Badge_column';
 
 // Styles
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-	display_big: {
-		display: 'flex',
-		justifyContent: 'space-evenly',
-		width: '95%',
-		maxWidth: 1100,
-		margin: '50px auto',
-	},
-	display_sm: {
-		display: 'flex',
-		flexWrap: 'wrap',
-		justifyContent: 'center',
-		margin: '3rem 0',
-	},
-	containerSM: {
-		display: 'flex',
-		flexWrap: 'wrap',
-		maxWidth: '325px',
-		margin: '1rem',
-	},
-}));
+import { useStyles_Homepage } from '../../../styles/mui_styles';
 
 const Badges_container = () => {
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
-	const classes_Mui = useStyles();
+	const classes_Mui = useStyles_Homepage();
 	const { allStrapiStackFrontends, allStrapiStackBackends, allStrapiStackTools } = useStaticQuery(graphql`
 		query MyQuery {
 			allStrapiStackFrontends {
