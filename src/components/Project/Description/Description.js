@@ -17,9 +17,18 @@ const useStyles = makeStyles((theme) => ({
 	},
 	tech_margin: {
 		fontWeight: 600,
-		fontSize: '1.2em',
 		color: 'black',
 		margin: '10px 0',
+	},
+	project_stack_color: {
+		color: '#000',
+	},
+	project_link: {
+		color: theme.palette.primary.main,
+		transition: '0.2s',
+		'&:hover': {
+			color: theme.palette.contrast.main,
+		},
 	},
 }));
 
@@ -27,10 +36,19 @@ const Description = ({ project }) => {
 	const classes_Mui = useStyles();
 
 	const stack = project.stack_list.split(',').map((el) => (
-		<Typography variant="body1" key={el}>
+		<Typography className={classes_Mui.project_stack_color} variant="body1" key={el}>
 			{el}
 		</Typography>
 	));
+
+	const createLink = (href, text) =>
+		href && (
+			<a className={classes.link} href={href}>
+				<Typography className={classes_Mui.project_link} variant="body1">
+					{text}
+				</Typography>
+			</a>
+		);
 
 	return (
 		<div className={classes.project_description}>
@@ -49,29 +67,16 @@ const Description = ({ project }) => {
 				</div>
 				<div>
 					<Typography className={classes_Mui.tech_margin} variant="body1">
-						Links
+						Code
 					</Typography>
-					{project.github_repository_backend && (
-						<Typography variant="body1">
-							<a className={classes.link} href={project.github_repository_backend}>
-								Backend GitHub <ArrowRight />
-							</a>
-						</Typography>
-					)}
-					{project.github_repository_frontend && (
-						<Typography variant="body1">
-							<a className={classes.link} href={project.github_repository_frontend}>
-								Frontend GitHub <ArrowRight />
-							</a>
-						</Typography>
-					)}
-					{project.live_preview && (
-						<Typography variant="body1">
-							<a className={classes.link} href={project.live_preview}>
-								Live Site <ArrowRight />
-							</a>
-						</Typography>
-					)}
+					{createLink(project.github_repository_backend, 'Backend')}
+					{createLink(project.github_repository_frontend, 'Frontend')}
+				</div>
+				<div>
+					<Typography className={classes_Mui.tech_margin} variant="body1">
+						Live
+					</Typography>
+					{createLink(project.live_preview, 'View Site')}
 				</div>
 			</div>
 		</div>

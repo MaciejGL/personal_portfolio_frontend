@@ -3,6 +3,7 @@ import React from 'react';
 // Components
 import Layout from '../components/Layout';
 import Description from '../components/Project/Description/Description';
+import Image_full from '../components/Project/Image_full/Image_full';
 
 const Project = ({ data }) => {
 	const { strapiProject: project } = data;
@@ -10,6 +11,7 @@ const Project = ({ data }) => {
 	return (
 		<Layout>
 			<Description project={project} />
+			<Image_full publicURL={project.image_full.publicURL} title={project.title} />
 		</Layout>
 	);
 };
