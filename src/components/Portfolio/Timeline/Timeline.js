@@ -18,7 +18,7 @@ const Timeline = () => {
 					node {
 						title
 						short_description
-						image {
+						image_card {
 							publicURL
 						}
 						github_repository_backend
@@ -39,7 +39,7 @@ const Timeline = () => {
 
 	const timeline_elements = allStrapiProject.edges.map((project) => (
 		<VerticalTimelineElement
-			key={project.node.name}
+			key={project.node.title}
 			className={classes.vertical_timeline_element}
 			date={project.node.Status}
 			iconClassName={classes.timeline_icon}
