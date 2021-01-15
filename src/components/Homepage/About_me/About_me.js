@@ -6,17 +6,10 @@ import ProfilePicture from '../../../images/profile_rounded.png';
 
 // Styles
 import classes from './About_me.module.scss';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-	paragraph: {
-		margin: '25px 0',
-		color: 'white',
-	},
-}));
+import { useStyles_Homepage } from '../../../styles/mui_styles';
 
 const About_me = () => {
-	const classes_Mui = useStyles();
+	const classes_Mui = useStyles_Homepage();
 	return (
 		<div className={classes.about_me_container} id="about_me">
 			<div className={classes.picture_holder}>

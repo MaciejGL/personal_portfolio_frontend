@@ -30,7 +30,7 @@ export const theme = (isDarkMode) =>
 			].join(','),
 			h1: {
 				margin: '1rem 0',
-				fontSize: '3rem',
+				fontSize: '4rem',
 			},
 			h2: {
 				margin: '1rem 0',

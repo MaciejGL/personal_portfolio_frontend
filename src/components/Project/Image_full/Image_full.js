@@ -4,13 +4,11 @@ import PropTypes from 'prop-types';
 // Styles
 import classes from './Image_full.module.scss';
 
-const Image_full = ({ publicURL, title }) => {
-	return (
-		<div className={classes.image_full_container}>
-			<img className={classes.image_full} src={publicURL} alt={title} />
-		</div>
-	);
-};
+const Image_full = ({ publicURL, title }) => (
+	<div className={classes.image_full_container}>
+		<img className={classes.image_full} src={publicURL} alt={title} />
+	</div>
+);
 
 Image_full.propTypes = {
 	publicURL: PropTypes.string.isRequired,

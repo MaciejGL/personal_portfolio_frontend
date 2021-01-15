@@ -1,39 +1,16 @@
 import React from 'react';
 
 // Components
-import { Typography } from '@material-ui/core';
-import { ArrowRight } from '@material-ui/icons';
+import { Typography, useTheme, useMediaQuery } from '@material-ui/core';
 
 // Styles
 import classes from './Description.module.scss';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-	project_title: {
-		fontWeight: 500,
-	},
-	project_full_description: {
-		margin: '30px 0',
-	},
-	tech_margin: {
-		fontWeight: 600,
-		color: 'black',
-		margin: '10px 0',
-	},
-	project_stack_color: {
-		color: '#000',
-	},
-	project_link: {
-		color: theme.palette.primary.main,
-		transition: '0.2s',
-		'&:hover': {
-			color: theme.palette.contrast.main,
-		},
-	},
-}));
+import { useStyles_Project } from '../../../styles/mui_styles';
 
 const Description = ({ project }) => {
-	const classes_Mui = useStyles();
+	const classes_Mui = useStyles_Project();
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const stack = project.stack_list.split(',').map((el) => (
 		<Typography className={classes_Mui.project_stack_color} variant="body1" key={el}>
@@ -43,7 +20,7 @@ const Description = ({ project }) => {
 
 	const createLink = (href, text) =>
 		href && (
-			<a className={classes.link} href={href}>
+			<a className={classes.link} href={href} target="_blank" rel="noreferrer">
 				<Typography className={classes_Mui.project_link} variant="body1">
 					{text}
 				</Typography>
@@ -52,7 +29,7 @@ const Description = ({ project }) => {
 
 	return (
 		<div className={classes.project_description}>
-			<Typography className={classes_Mui.project_title} variant="h2">
+			<Typography className={matches ? classes_Mui.project_title_sm : classes_Mui.project_title} variant="h1">
 				{project.title}
 			</Typography>
 			<Typography className={classes_Mui.project_full_description} variant="body1">

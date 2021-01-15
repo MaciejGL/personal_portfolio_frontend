@@ -24,12 +24,11 @@ exports.createPages = async ({ graphql, actions }) => {
 	}
 	const projectTemplate = path.resolve('./src/templates/project.js');
 	data.allStrapiProject.edges.forEach((edge) => {
-		const slug = edge.node.title.replace(/ /g, '').toLowerCase();
 		createPage({
-			path: `/portfolio/${slug}/`,
+			path: `/portfolio/${edge.node.title}/`,
 			component: slash(projectTemplate),
 			context: {
-				slug,
+				slug: edge.node.title,
 				strapiId: edge.node.strapiId,
 			},
 		});

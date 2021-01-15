@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import { Typography } from '@material-ui/core';
@@ -6,33 +7,30 @@ import Badge from './Badge';
 
 // Styles
 import classes from './Badge.module.scss';
-import { makeStyles } from '@material-ui/core/styles';
-const useStyles = makeStyles({
-	technologies: {
-		margin: '2rem 0 0',
-	},
-	text_center: {
-		margin: '10px 0 ',
-		textAlign: 'center',
-	},
-});
+import { useStyles_Homepage } from '../../../styles/mui_styles';
+
 const Badge_column = ({ nodes, context }) => {
-	const classes_Mui = useStyles();
+	const classes_Mui = useStyles_Homepage();
 	const badgeGenerator = (arr, Comp) => arr.map((el) => <Comp key={el.name} badge={el} />);
 
 	return (
 		<div className={classes.badge_column_container}>
 			<i className={context.topBadge}></i>
 			<Typography variant="h6">{context.title}</Typography>
-			<Typography className={classes_Mui.text_center} variant="body1">
+			<Typography className={classes_Mui.badge_column_text_center} variant="body1">
 				{context.text}
 			</Typography>
-			<Typography className={classes_Mui.technologies} variant="h6">
+			<Typography className={classes_Mui.badge_column_technologies} variant="h6">
 				Technologies:
 			</Typography>
 			<div className={classes.badges_container}>{badgeGenerator(nodes, Badge)}</div>
 		</div>
 	);
+};
+
+Badge_column.propTypes = {
+	nodes: PropTypes.array.isRequired,
+	context: PropTypes.object.isRequired,
 };
 
 export default Badge_column;
