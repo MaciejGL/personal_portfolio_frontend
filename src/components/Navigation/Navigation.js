@@ -4,7 +4,7 @@ import { Drawer, useMediaQuery } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Links from './Links/Links';
 import { Spin as Hamburger } from 'hamburger-react';
-import SocialMedia from '../SocialMedia/SocialMedia';
+import SocialMedia from '../common/SocialMedia/SocialMedia';
 
 // Style
 import classes from './Navigation.module.scss';
