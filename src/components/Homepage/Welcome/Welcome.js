@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import laptop_working from '../../assets/laptop-working.json';
 import Lottie from '../../common/Lottie/Lottie';
-import SocialMedia from '../../common/Lottie/SocialMedia/SocialMedia';
+import SocialMedia from '../../common/SocialMedia/SocialMedia';
 import { ChevronLeftRounded, ChevronRightRounded } from '@material-ui/icons';
 
 // Styles

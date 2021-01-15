@@ -18,7 +18,7 @@ const Timeline = () => {
 					node {
 						title
 						short_description
-						image {
+						image_card {
 							publicURL
 						}
 						github_repository_backend

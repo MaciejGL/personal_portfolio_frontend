@@ -28,7 +28,7 @@ const Project_card = ({ data }) => {
 	const path = data.title.replace(/ /g, '').toLowerCase();
 	return (
 		<div className={classes.project_card_container}>
-			<img className={classes.project_card_image} src={data.image.publicURL} alt={data.title} />
+			<img className={classes.project_card_image} src={data.image_card.publicURL} alt={data.title} />
 			<Typography variant="h5">{data.title}</Typography>
 			<Typography className={classes_Mui.project_card_short_description} variant="body1">
 				{data.short_description}
