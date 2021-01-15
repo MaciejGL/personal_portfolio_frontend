@@ -5,12 +5,10 @@ import Navigation from './Navigation/Navigation';
 // Styles
 import classes from './Header.module.scss';
 
-const Header = () => {
-	return (
-		<header id="top" className={classes.header}>
-			<Navigation />
-		</header>
-	);
-};
+const Header = () => (
+	<header id="top" className={classes.header}>
+		<Navigation />
+	</header>
+);
 
 export default Header;
