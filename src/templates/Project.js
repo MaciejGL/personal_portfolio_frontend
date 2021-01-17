@@ -11,7 +11,8 @@ const Project = ({ data }) => {
 	return (
 		<Layout>
 			<Description project={project} />
-			<Image_full publicURL={project.image_full.publicURL} title={project.title} />
+			<Image_full publicURL={project.image_full.publicURL} title={project.title} shadow={3} />
+			<Image_full publicURL={project.image_devices.publicURL} title={project.title} />
 		</Layout>
 	);
 };
@@ -31,6 +32,9 @@ export const query = graphql`
 			full_description {
 				description
 				id
+			}
+			image_devices {
+				publicURL
 			}
 			stack {
 				name
