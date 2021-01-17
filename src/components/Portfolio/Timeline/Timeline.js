@@ -10,34 +10,33 @@ import Project_card from '../Project_card/Project_card';
 import 'react-vertical-timeline-component/style.min.css';
 import classes from './Timeline.module.scss';
 
-const Timeline = () => {
-	const { allStrapiProject } = useStaticQuery(graphql`
-		{
-			allStrapiProject {
-				edges {
-					node {
-						title
-						short_description
-						image_card {
-							publicURL
-						}
-						github_repository_backend
-						github_repository_frontend
-						live_preview
-						Status
-						icon_main_tech {
-							publicURL
-						}
+const query = graphql`
+	{
+		allStrapiProject(sort: { fields: strapiId, order: ASC }) {
+			edges {
+				node {
+					title
+					short_description
+					strapiId
+					live_preview
+					icon_main_tech {
+						publicURL
+					}
+					image_card {
+						publicURL
 					}
 				}
 			}
 		}
-	`);
+	}
+`;
+
+const Timeline = () => {
+	const { allStrapiProject } = useStaticQuery(query);
 	const timeline_elements = allStrapiProject.edges.map((project) => (
 		<VerticalTimelineElement
 			key={project.node.title}
 			className={classes.vertical_timeline_element}
-			date={project.node.Status}
 			iconClassName={classes.timeline_icon}
 			icon={<Icon path={project.node.icon_main_tech.publicURL} alt={project.node.title} />}
 		>

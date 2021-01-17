@@ -11,7 +11,8 @@ const Project = ({ data }) => {
 	return (
 		<Layout>
 			<Description project={project} />
-			<Image_full publicURL={project.image_full.publicURL} title={project.title} />
+			<Image_full publicURL={project.image_full.publicURL} title={project.title} shadow={3} />
+			<Image_full publicURL={project.image_devices.publicURL} title={project.title} />
 		</Layout>
 	);
 };
@@ -21,19 +22,23 @@ export const query = graphql`
 	query ProjectTemplate($strapiId: String!) {
 		strapiProject(strapiId: { eq: $strapiId }) {
 			title
-			Status
-			extras
-			full_description
-			github_repository_backend
-			github_repository_frontend
 			live_preview
-			stack_list
 			video_url_youtube
-			images_overview {
-				url
-			}
+			github_repository_frontend
+			github_repository_backend
 			image_full {
 				publicURL
+			}
+			full_description {
+				description
+				id
+			}
+			image_devices {
+				publicURL
+			}
+			stack {
+				name
+				id
 			}
 		}
 	}
