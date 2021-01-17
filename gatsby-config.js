@@ -1,3 +1,4 @@
+const path = require(`path`);
 module.exports = {
 	siteMetadata: {
 		title: 'Maciej Glowacki - Portfolio',
@@ -11,11 +12,18 @@ module.exports = {
 				},
 			},
 		},
-		'gatsby-plugin-sass',
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `images`,
+				path: path.join(__dirname, `src`, `images`),
+			},
+		},
 		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-sass',
 		'gatsby-plugin-react-helmet',
 		'gatsby-transformer-remark',
-		'gatsby-transformer-sharp',
 		`gatsby-plugin-smoothscroll`,
 		{
 			resolve: 'gatsby-transformer-remark',
@@ -36,14 +44,6 @@ module.exports = {
 				],
 				queryLimit: 1000,
 			},
-		},
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				name: 'images',
-				path: './src/images/',
-			},
-			__key: 'images',
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
