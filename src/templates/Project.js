@@ -21,19 +21,20 @@ export const query = graphql`
 	query ProjectTemplate($strapiId: String!) {
 		strapiProject(strapiId: { eq: $strapiId }) {
 			title
-			Status
-			extras
-			full_description
-			github_repository_backend
-			github_repository_frontend
 			live_preview
-			stack_list
 			video_url_youtube
-			images_overview {
-				url
-			}
+			github_repository_frontend
+			github_repository_backend
 			image_full {
 				publicURL
+			}
+			full_description {
+				description
+				id
+			}
+			stack {
+				name
+				id
 			}
 		}
 	}

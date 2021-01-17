@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 // Components
-import { Button, Typography } from '@material-ui/core';
+import { Button, Typography, Paper } from '@material-ui/core';
 
 // Styles
 import classes from './Project_card.module.scss';
@@ -11,11 +11,14 @@ import { useStyles_Project_card } from '../../../styles/mui_styles';
 
 const Project_card = ({ data }) => {
 	const classes_Mui = useStyles_Project_card();
-
 	return (
 		<div className={classes.project_card_container}>
-			<img className={classes.project_card_image} src={data.image_card.publicURL} alt={data.title} />
-			<Typography variant="h5">{data.title}</Typography>
+			<Paper elevation={1}>
+				<img className={classes.project_card_image} src={data.image_card.publicURL} alt={data.title} />
+			</Paper>
+			<Typography className={classes_Mui.project_card_title} variant="h5">
+				{data.title}
+			</Typography>
 			<Typography className={classes_Mui.project_card_short_description} variant="body1">
 				{data.short_description}
 			</Typography>

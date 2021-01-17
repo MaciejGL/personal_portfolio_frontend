@@ -82,6 +82,9 @@ export const useStyles_Project_card = makeStyles((theme) => ({
 			boxShadow: `0 0 0px 1px ${theme.palette.contrast.main}`,
 		},
 	},
+	project_card_title: {
+		margin: '20px 0',
+	},
 	project_card_short_description: {
 		paddingBottom: '20px',
 	},
