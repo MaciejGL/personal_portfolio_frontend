@@ -20,6 +20,8 @@ Image_full.propTypes = {
 	publicURL: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	shadow: PropTypes.number,
+	fluid: PropTypes.object,
+	maxWidth: PropTypes.string,
 };
 
 export default Image_full;

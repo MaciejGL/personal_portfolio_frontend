@@ -44,6 +44,7 @@ Project_card.propTypes = {
 		short_description: PropTypes.string.isRequired,
 		live_preview: PropTypes.string.isRequired,
 	}),
+	shadow: PropTypes.bool,
 };
 
 export default Project_card;

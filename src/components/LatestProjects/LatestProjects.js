@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 // Components
 import { Button, Typography } from '@material-ui/core';
@@ -10,25 +11,26 @@ import Project_card from '../Portfolio/Project_card/Project_card';
 import classes from './LatestProjects.module.scss';
 import { useStyles_Project_card } from '../../styles/mui_styles';
 
-const LatestProjects = ({ title }) => {
-	const classes_Mui = useStyles_Project_card();
-	const query = graphql`
-		{
-			allStrapiProject(sort: { order: DESC, fields: production_date }, limit: 2) {
-				edges {
-					node {
-						id
-						image_card {
-							publicURL
-						}
-						title
-						short_description
-						live_preview
+const query = graphql`
+	{
+		allStrapiProject(sort: { order: DESC, fields: production_date }, limit: 2) {
+			edges {
+				node {
+					id
+					image_card {
+						publicURL
 					}
+					title
+					short_description
+					live_preview
 				}
 			}
 		}
-	`;
+	}
+`;
+
+const LatestProjects = ({ title }) => {
+	const classes_Mui = useStyles_Project_card();
 	const { allStrapiProject } = useStaticQuery(query);
 
 	return (
@@ -48,4 +50,7 @@ const LatestProjects = ({ title }) => {
 	);
 };
 
+LatestProjects.propTypes = {
+	title: PropTypes.string.isRequired,
+};
 export default LatestProjects;

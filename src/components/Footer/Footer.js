@@ -10,7 +10,7 @@ import SocialMedia from '../common/SocialMedia/SocialMedia';
 import { useStyles_Footer } from '../../styles/mui_styles';
 import classes from './Footer.module.scss';
 
-const Footer = ({ children }) => {
+const Footer = () => {
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 	const classes_Mui = useStyles_Footer();
