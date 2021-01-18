@@ -9,7 +9,6 @@ import LatestProjects from '../components/LatestProjects/LatestProjects';
 
 const Project = ({ data }) => {
 	const { strapiProject: project } = data;
-	console.log(project);
 	return (
 		<Layout>
 			<Description project={project} />

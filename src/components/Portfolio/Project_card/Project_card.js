@@ -9,11 +9,11 @@ import { Button, Typography, Paper } from '@material-ui/core';
 import classes from './Project_card.module.scss';
 import { useStyles_Project_card } from '../../../styles/mui_styles';
 
-const Project_card = ({ data }) => {
+const Project_card = ({ data, shadow }) => {
 	const classes_Mui = useStyles_Project_card();
 	return (
-		<div className={classes.project_card_container}>
-			<Paper elevation={1}>
+		<div className={shadow ? [classes.project_card_container, classes.box_shadow].join(' ') : classes.project_card_container}>
+			<Paper elevation={0}>
 				<img className={classes.project_card_image} src={data.image_card.publicURL} alt={data.title} />
 			</Paper>
 			<Typography className={classes_Mui.project_card_title} variant="h5">

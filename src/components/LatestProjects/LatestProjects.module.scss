@@ -1,0 +1,25 @@
+.section_container {
+	margin: 4rem;
+	width: 90%;
+	max-width: 1050px;
+}
+.projects_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	@media (min-width: 960px) {
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		& > div {
+			width: 49%;
+		}
+	}
+}
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
