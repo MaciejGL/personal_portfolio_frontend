@@ -2,12 +2,13 @@ import React from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 // Component
-import { Typography, Paper, Button, useMediaQuery, useTheme } from '@material-ui/core';
+import { Typography, Button, useMediaQuery, useTheme } from '@material-ui/core';
 import { KeyboardArrowUp } from '@material-ui/icons';
-import SocialMedia from './common/SocialMedia/SocialMedia';
+import SocialMedia from '../common/SocialMedia/SocialMedia';
 
 // Styles
-import { useStyles_Footer } from '../styles/mui_styles';
+import { useStyles_Footer } from '../../styles/mui_styles';
+import classes from './Footer.module.scss';
 
 const Footer = () => {
 	const theme = useTheme();
@@ -21,13 +22,15 @@ const Footer = () => {
 	);
 
 	return (
-		<Paper elevation={2} square className={classes_Mui.footer_container}>
-			<Typography className={classes_Mui.footer_typography} variant="body2">
-				&copy; Maciej "Mats" Glowacki
-			</Typography>
-			<SocialMedia />
-			{ScrollTopComp}
-		</Paper>
+		<div className={classes.footer_container}>
+			<div className={classes.centered}>
+				<Typography className={classes_Mui.footer_typography} variant="body2">
+					&copy; Maciej "Mats" Glowacki
+				</Typography>
+				<SocialMedia />
+				{ScrollTopComp}
+			</div>
+		</div>
 	);
 };
 

@@ -15,12 +15,6 @@ export const useStyles_Footer = makeStyles((theme) => ({
 	footer_typography: {
 		color: theme.palette.contrast.main,
 	},
-	footer_container: {
-		display: 'flex',
-		justifyContent: 'space-around',
-		alignItems: 'center',
-		height: '60px',
-	},
 	btn_scroll_top: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -74,13 +68,11 @@ export const useStyles_Homepage = makeStyles((theme) => ({
 
 export const useStyles_Project_card = makeStyles((theme) => ({
 	details: {
-		backgroundColor: theme.palette.contrast.main,
-		color: '#fff',
 		'&:hover': {
-			backgroundColor: '#fff',
-			color: theme.palette.contrast.main,
-			boxShadow: `0 0 0px 1px ${theme.palette.contrast.main}`,
+			backgroundColor: theme.palette.contrast.main,
+			color: '#fff',
 		},
+		margin: '0 10px',
 	},
 	project_card_title: {
 		margin: '20px 0',
@@ -88,8 +80,26 @@ export const useStyles_Project_card = makeStyles((theme) => ({
 	project_card_short_description: {
 		paddingBottom: '20px',
 	},
+	visit_portfolio_btn: {
+		color: theme.palette.contrast.main,
+		'&:hover': {
+			backgroundColor: theme.palette.contrast.main,
+			color: '#fff',
+		},
+	},
 }));
 
+export const useStyles_InTouch = makeStyles((theme) => ({
+	text: {
+		margin: '2rem 0',
+		maxWidth: '500px',
+	},
+	email: {
+		textDecoration: 'underline',
+		fontWeight: 500,
+		color: theme.palette.primary.main,
+	},
+}));
 export const useStyles_Project = makeStyles((theme) => ({
 	project_title: {
 		fontWeight: 500,
@@ -116,5 +126,9 @@ export const useStyles_Project = makeStyles((theme) => ({
 		'&:hover': {
 			color: theme.palette.contrast.main,
 		},
+	},
+	description_paragraph: {
+		margin: '10px 0',
+		maxWidth: '700px',
 	},
 }));

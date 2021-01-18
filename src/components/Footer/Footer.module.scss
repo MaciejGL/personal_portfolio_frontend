@@ -1,0 +1,17 @@
+.footer_container {
+	width: 100%;
+	background-color: var(--contrast);
+	& * {
+		color: white;
+	}
+}
+
+.centered {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	height: 60px;
+	width: 90%;
+	max-width: 1200px;
+}

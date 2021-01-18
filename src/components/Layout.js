@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Components
-import Header from './Header';
-import Footer from './Footer';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 import { Paper } from '@material-ui/core';
 // Styles
 import classes from './Layout.module.scss';
