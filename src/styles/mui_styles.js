@@ -117,4 +117,8 @@ export const useStyles_Project = makeStyles((theme) => ({
 			color: theme.palette.contrast.main,
 		},
 	},
+	description_paragraph: {
+		margin: '10px 0',
+		maxWidth: '700px',
+	},
 }));
