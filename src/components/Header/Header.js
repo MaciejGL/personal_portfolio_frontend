@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import Navigation from './Navigation/Navigation';
+import Navigation from '../Navigation/Navigation';
 // Styles
 import classes from './Header.module.scss';
 
