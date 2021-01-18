@@ -89,6 +89,15 @@ export const useStyles_Project_card = makeStyles((theme) => ({
 	},
 }));
 
+export const useStyles_InTouch = makeStyles((theme) => ({
+	text: {
+		margin: '2rem 0',
+		maxWidth: '500px',
+	},
+	email: {
+		textDecoration: 'underline',
+	},
+}));
 export const useStyles_Project = makeStyles((theme) => ({
 	project_title: {
 		fontWeight: 500,

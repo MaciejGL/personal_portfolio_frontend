@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import Welcome from '../components/Homepage/Welcome/Welcome';
 import About_me from '../components/Homepage/About_me/About_me';
 import Tech_stack from '../components/Homepage/Tech_stack/Tech_stack';
+import InTouch from '../components/InTouch/InTouch';
 
 const IndexPage = () => (
 	<Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
 		<Welcome />
 		<About_me />
 		<Tech_stack />
+		<InTouch />
 	</Layout>
 );
 
