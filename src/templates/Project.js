@@ -18,7 +18,7 @@ const Project = ({ data }) => {
 			{project.stackExplanation && <Details title="Stack Explanation" data={project.stackExplanation} stack={project.stack} />}
 			<Image_full publicURL={project.image_devices.publicURL} title={project.title} maxWidth="1000px" />
 			{project.thoughtsAndImprovements && <Details title="Thoughts and Future Improvements" data={project.thoughtsAndImprovements} />}
-			<LatestProjects />
+			<LatestProjects title="Other Projects" />
 		</Layout>
 	);
 };
@@ -32,7 +32,6 @@ export const query = graphql`
 			video_url_youtube
 			github_repository_frontend
 			github_repository_backend
-
 			full_description {
 				id
 				description

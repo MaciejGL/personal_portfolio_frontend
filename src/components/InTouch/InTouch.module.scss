@@ -1,13 +1,10 @@
 .container_full_width {
 	width: 100%;
-	// background-color: var(--contrast);
-	// & > * {
-	// 	color: white;
-	// }
+	margin: 4rem 0;
 }
 
 .container_text {
 	margin: 3rem auto;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1000px;
 }

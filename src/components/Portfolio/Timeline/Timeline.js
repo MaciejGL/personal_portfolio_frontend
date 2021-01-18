@@ -12,13 +12,14 @@ import classes from './Timeline.module.scss';
 
 const query = graphql`
 	{
-		allStrapiProject(sort: { fields: strapiId, order: ASC }) {
+		allStrapiProject(sort: { order: DESC, fields: production_date }) {
 			edges {
 				node {
 					title
 					short_description
 					strapiId
 					live_preview
+					production_date
 					icon_main_tech {
 						publicURL
 					}
