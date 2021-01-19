@@ -1,16 +1,25 @@
-import * as React from 'react';
-// import { Link } from 'gatsby';
+import React from 'react';
+import { Link } from 'gatsby';
 
 // Components
 import Layout from '../components/Layout';
-// import { Typography } from '@material-ui/core';
 import SEO from '../components/SEO/SEO';
+import Lottie from '../components/common/Lottie/Lottie';
+import animationJSON from '../components/assets/404.json';
+import { Button } from '@material-ui/core';
+import { ArrowLeft } from '@material-ui/icons';
 
 // markup
 const NotFoundPage = () => {
 	return (
 		<Layout>
 			<SEO title="404" article="Website" />
+			<div style={{ marginTop: '10rem', maxWidth: '600px' }}>
+				<Lottie animation={animationJSON} />
+			</div>
+			<Link to={'/'}>
+				<Button startIcon={<ArrowLeft />}>Go back to homepage</Button>
+			</Link>
 		</Layout>
 	);
 };
