@@ -24,7 +24,7 @@ const Project_card = ({ data, shadow }) => {
 			</Typography>
 			<div className={classes.actions_container}>
 				<Button variant="text" className={classes_Mui.details}>
-					<Link to={`./${data.title}`}>Details</Link>
+					<Link to={`/portfolio/${data.title}`}>Details</Link>
 				</Button>
 
 				<Button variant="text" className={classes_Mui.details}>

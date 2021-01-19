@@ -13,14 +13,16 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `images`,
-				path: path.join(__dirname, `src`, `images`),
-			},
-		},
-		'gatsby-plugin-sharp',
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Lato\:100,300,400,700`,
+        ],
+        display: 'swap'
+      }
+    },
 		'gatsby-transformer-sharp',
+		'gatsby-plugin-sharp',
 		'gatsby-plugin-sass',
 		'gatsby-plugin-react-helmet',
 		'gatsby-transformer-remark',

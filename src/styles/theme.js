@@ -1,17 +1,15 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-export const theme = (isDarkMode) =>
-	createMuiTheme({
+export const theme = createMuiTheme({
 		palette: {
 			primary: { main: '#335AC0' },
 			secondary: { main: '#3570CA' },
-			contrast: { main: '#2AB987' },
+			accent: { main: '#2AB987' },
 			text_primary: { main: '#292826' },
 			text_secondary: { main: '#696969' },
-			type: isDarkMode ? 'dark' : 'light',
+			type: 'light',
 			background: {
-				default: isDarkMode ? '#292826' : '#fff',
-				paper: isDarkMode ? '#292826' : '#fff',
+				default: '#fff',
 			},
 		},
 		typography: {

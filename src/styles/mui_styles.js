@@ -13,7 +13,7 @@ export const useStyles_Navigation = makeStyles((theme) => ({
 
 export const useStyles_Footer = makeStyles((theme) => ({
 	footer_typography: {
-		color: theme.palette.contrast.main,
+		color: theme.palette.accent.main,
 	},
 	btn_scroll_top: {
 		display: 'flex',
@@ -68,8 +68,8 @@ export const useStyles_Homepage = makeStyles((theme) => ({
 
 export const useStyles_Project_card = makeStyles((theme) => ({
 	details: {
-		'&:hover': {
-			backgroundColor: theme.palette.contrast.main,
+		'&.MuiButton-root:hover': {
+			backgroundColor: theme.palette.accent.main,
 			color: '#fff',
 		},
 		margin: '0 10px',
@@ -81,11 +81,14 @@ export const useStyles_Project_card = makeStyles((theme) => ({
 		paddingBottom: '20px',
 	},
 	visit_portfolio_btn: {
-		color: theme.palette.contrast.main,
-		'&:hover': {
-			backgroundColor: theme.palette.contrast.main,
+		'&.MuiButton-root': {
+			color: theme.palette.accent.main,
+		},
+		'&.MuiButton-root:hover': {
+			backgroundColor: theme.palette.accent.main,
 			color: '#fff',
 		},
+
 	},
 }));
 
@@ -124,7 +127,7 @@ export const useStyles_Project = makeStyles((theme) => ({
 		color: theme.palette.primary.main,
 		transition: '0.2s',
 		'&:hover': {
-			color: theme.palette.contrast.main,
+			color: theme.palette.accent.main,
 		},
 	},
 	description_paragraph: {
