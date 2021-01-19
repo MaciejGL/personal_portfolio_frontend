@@ -34,10 +34,16 @@ const query = graphql`
 
 const Timeline = () => {
 	const { allStrapiProject } = useStaticQuery(query);
+	const formatDate = (date) => {
+		const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		const newDate = new Date(date);
+		return `${monthNames[newDate.getMonth()]} ${newDate.getFullYear()}`;
+	};
 	const timeline_elements = allStrapiProject.edges.map((project) => (
 		<VerticalTimelineElement
 			key={project.node.title}
 			className={classes.vertical_timeline_element}
+			date={formatDate(project.node.production_date)}
 			iconClassName={classes.timeline_icon}
 			icon={<Icon path={project.node.icon_main_tech.publicURL} alt={project.node.title} />}
 		>
@@ -46,7 +52,7 @@ const Timeline = () => {
 	));
 	return (
 		<div className={classes.timeline_wrapper}>
-			<VerticalTimeline className={classes.vertical_timeline} layout={'2-columns'}>
+			<VerticalTimeline animate={false} className={classes.vertical_timeline} layout={'2-columns'}>
 				{timeline_elements}
 			</VerticalTimeline>
 		</div>

@@ -1,4 +1,5 @@
 .inner_text {
+	position: relative;
 	display: flex;
 	align-items: center;
 	padding: 1rem 1rem 1rem 2rem;
@@ -13,23 +14,23 @@
 			margin: 0;
 		}
 	}
-	& > h6 {
-		color: inherit;
-	}
+
 	&:hover {
-		color: var(--contrast);
+		color: var(--primary-color);
 	}
+
 	@media (min-width: 960px) {
 		flex-direction: column;
 		align-items: center;
+		padding: 1rem;
 	}
 }
 
 .container {
 	padding-top: 100px;
-	color: var(--text-secondary-color);
+	color: rgb(88, 88, 88);
 	.activeLink {
-		color: var(--contrast);
+		color: var(--primary-color);
 	}
 	@media (min-width: 960px) {
 		padding: 0;

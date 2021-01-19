@@ -10,7 +10,9 @@ const InTouch = () => {
 	return (
 		<div className={classes.container_full_width}>
 			<div className={classes.container_text}>
-				<Typography variant="h2">Let's Stay In Touch</Typography>
+				<Typography variant="h2" component="h1">
+					Let's build something together.
+				</Typography>
 				<Typography className={classes_Mui.text} variant="body1">
 					Would you like to know more? Do You have any questions? Or just want to connect? Do not hesitate to contact. I'm waiting to hear from You.
 				</Typography>
@@ -18,6 +20,7 @@ const InTouch = () => {
 					m.glowacki01@gmail.com
 				</Typography>
 			</div>
+			<div></div>
 		</div>
 	);
 };

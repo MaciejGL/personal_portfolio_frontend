@@ -19,7 +19,7 @@ const Navigation = () => {
 		<nav className={classes.nav}>
 			{matches ? (
 				<div className={classes.hamburger}>
-					<Hamburger rounded toggled={isOpen} toggle={setOpen} />
+					<Hamburger label="Navigation Button" rounded toggled={isOpen} toggle={setOpen} />
 				</div>
 			) : (
 				<Links />
