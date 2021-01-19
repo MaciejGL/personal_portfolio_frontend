@@ -12,14 +12,17 @@ const SocialMedia = ({ line }) => {
 		{
 			icon: <GitHub />,
 			link: 'https://github.com/MaciejGL',
+			label: 'Github',
 		},
 		{
 			icon: <Facebook />,
 			link: 'https://www.facebook.com/profile.php?id=100001079132075',
+			label: 'Facebook',
 		},
 		{
 			icon: <LinkedIn />,
 			link: 'https://www.linkedin.com/in/maciej-glowacki1/',
+			label: 'LinkedIn',
 		},
 	];
 
@@ -29,7 +32,7 @@ const SocialMedia = ({ line }) => {
 			{social_components &&
 				social_components.map((el) => (
 					<div key={el.link} className={classes.icon_container}>
-						<a href={el.link} target="_blank" rel="noreferrer">
+						<a aria-label={el.label} href={el.link} target="_blank" rel="noreferrer">
 							{el.icon}
 						</a>
 					</div>

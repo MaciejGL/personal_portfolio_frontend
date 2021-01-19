@@ -68,27 +68,15 @@ export const useStyles_Homepage = makeStyles((theme) => ({
 
 export const useStyles_Project_card = makeStyles((theme) => ({
 	details: {
-		'&.MuiButton-root:hover': {
-			backgroundColor: theme.palette.accent.main,
-			color: '#fff',
-		},
-		margin: '0 10px',
+		margin: '20px 0 0',
 	},
 	project_card_title: {
 		margin: '20px 0',
 	},
 	project_card_short_description: {
 		paddingBottom: '20px',
-	},
-	visit_portfolio_btn: {
-		'&.MuiButton-root': {
-			color: theme.palette.accent.main,
-		},
-		'&.MuiButton-root:hover': {
-			backgroundColor: theme.palette.accent.main,
-			color: '#fff',
-		},
-
+		maxHeight: '170px',
+		overflowY: 'scroll',
 	},
 }));
 

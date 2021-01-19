@@ -6,11 +6,13 @@ import Description from '../components/Project/Description/Description';
 import Image_full from '../components/Project/Image_full/Image_full';
 import Details from '../components/Project/Details/Details';
 import LatestProjects from '../components/LatestProjects/LatestProjects';
+import SEO from '../components/SEO/SEO';
 
 const Project = ({ data }) => {
 	const { strapiProject: project } = data;
 	return (
 		<Layout>
+			<SEO title={project.title} description={project.short_description} image={project.image_full.publicURL} article={'article'} />
 			<Description project={project} />
 			<Image_full publicURL={project.image_devices.publicURL} title={project.title} maxWidth="1000px" />
 
@@ -32,6 +34,7 @@ export const query = graphql`
 			video_url_youtube
 			github_repository_frontend
 			github_repository_backend
+			short_description
 			full_description {
 				id
 				description

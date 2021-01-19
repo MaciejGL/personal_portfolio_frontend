@@ -13,11 +13,8 @@
 			margin: 0;
 		}
 	}
-	& > h6 {
-		color: inherit;
-	}
 	&:hover {
-		color: var(--contrast);
+		color: var(--primary-color);
 	}
 	@media (min-width: 960px) {
 		flex-direction: column;
@@ -27,9 +24,9 @@
 
 .container {
 	padding-top: 100px;
-	color: var(--text-secondary-color);
+	color: black;
 	.activeLink {
-		color: var(--contrast);
+		color: var(--primary-color);
 	}
 	@media (min-width: 960px) {
 		padding: 0;

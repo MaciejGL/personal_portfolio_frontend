@@ -2,6 +2,28 @@ const path = require(`path`);
 module.exports = {
 	siteMetadata: {
 		title: 'Maciej Glowacki - Portfolio',
+		description: 'Personal Portfolio - Maciej Mats Glowacki. Fullstack Javascript Developer. Developer from Poland, currently live in Norway, Oslo.',
+		keywords: [
+			'React',
+			'Gatsby',
+			'Jamstack',
+			'Portfolio',
+			'Maciej',
+			'Glowacki',
+			'Javascript',
+			'Fullstack',
+			'Developer',
+			'Dev',
+			'Strapi',
+			'Netlify',
+			'Blog',
+			'Norway',
+			'Oslo',
+		],
+		url: 'https://nervous-goodall-0e0adc.netlify.app',
+		image: '/images/profile_rounded.png',
+
+		lang: `en`,
 	},
 	plugins: [
 		{
@@ -13,14 +35,12 @@ module.exports = {
 			},
 		},
 		{
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Lato\:100,300,400,700`,
-        ],
-        display: 'swap'
-      }
-    },
+			resolve: `gatsby-plugin-google-fonts`,
+			options: {
+				fonts: [`Lato\:100,300,400,700`],
+				display: 'swap',
+			},
+		},
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-sass',
@@ -54,6 +74,27 @@ module.exports = {
 				path: './src/pages/',
 			},
 			__key: 'pages',
+		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'images',
+				path: './src/images/',
+			},
+			__key: 'images',
+		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: 'Maciej Glowacki - Portfolio',
+				short_name: 'Portfolio',
+				start_url: '/',
+				background_color: '#fff',
+				theme_color: '#000',
+				display: 'browser',
+				icon: 'src/images/favicon-32x32.png',
+				crossOrigin: `use-credentials`,
+			},
 		},
 	],
 };

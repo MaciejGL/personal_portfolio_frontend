@@ -16,11 +16,13 @@ const Badge_column = ({ nodes, context }) => {
 	return (
 		<div className={classes.badge_column_container}>
 			<i className={context.topBadge}></i>
-			<Typography variant="h6">{context.title}</Typography>
+			<Typography variant="h5" component="h2">
+				{context.title}
+			</Typography>
 			<Typography className={classes_Mui.badge_column_text_center} variant="body1">
 				{context.text}
 			</Typography>
-			<Typography className={classes_Mui.badge_column_technologies} variant="h6">
+			<Typography className={classes_Mui.badge_column_technologies} variant="h6" component="h3">
 				Technologies:
 			</Typography>
 			<div className={classes.badges_container}>{badgeGenerator(nodes, Badge)}</div>
