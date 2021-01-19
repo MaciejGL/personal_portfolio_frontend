@@ -9,7 +9,6 @@ import Project_card from '../Portfolio/Project_card/Project_card';
 
 // Styles
 import classes from './LatestProjects.module.scss';
-import { useStyles_Project_card } from '../../styles/mui_styles';
 
 const query = graphql`
 	{
@@ -30,7 +29,6 @@ const query = graphql`
 `;
 
 const LatestProjects = ({ title }) => {
-	const classes_Mui = useStyles_Project_card();
 	const { allStrapiProject } = useStaticQuery(query);
 
 	return (

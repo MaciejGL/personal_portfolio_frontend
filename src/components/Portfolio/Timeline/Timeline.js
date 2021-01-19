@@ -52,7 +52,7 @@ const Timeline = () => {
 	));
 	return (
 		<div className={classes.timeline_wrapper}>
-			<VerticalTimeline className={classes.vertical_timeline} layout={'2-columns'}>
+			<VerticalTimeline animate={false} className={classes.vertical_timeline} layout={'2-columns'}>
 				{timeline_elements}
 			</VerticalTimeline>
 		</div>
