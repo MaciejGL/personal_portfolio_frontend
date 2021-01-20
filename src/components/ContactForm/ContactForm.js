@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import axios from 'axios';
 
 // Components
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button, Typography } from '@material-ui/core';
+import Loader from 'react-loader-spinner';
 
 // Styles
 import classes from './ContactForm.module.scss';
@@ -16,14 +18,30 @@ const validationSchema = yup.object({
 
 const ContactForm = () => {
 	const classes_Mui = useStyles_ContactForm();
+	const [isLoading, setIsLoading] = useState(false);
+	const [emailReposne, setEmailResponse] = useState('');
+	const formatEmail = (values) => ({
+		from: values.email,
+		to: process.env.EMAIL,
+		replyTo: values.email,
+		subject: 'Portfolio - Contact Form',
+		text: values.message,
+	});
 	const formik = useFormik({
 		initialValues: {
 			email: '',
 			message: '',
 		},
 		validationSchema: validationSchema,
-		onSubmit: (values) => {
-			alert(JSON.stringify(values, null, 2));
+		onSubmit: async (values, { resetForm }) => {
+			setIsLoading(true);
+			const emailData = formatEmail(values);
+			const { status } = await axios.post(`${process.env.CMS_URL}/email`, emailData);
+			status === 200
+				? setEmailResponse({ success: true, text: 'Email has been sent. I will reply as soon as possible.' })
+				: setEmailResponse({ success: false, text: 'Oops something went wrong. Please try again' });
+			setIsLoading(false);
+			resetForm({});
 		},
 	});
 
@@ -57,8 +75,23 @@ const ContactForm = () => {
 					helperText={formik.touched.message && formik.errors.message}
 				/>
 				<Button color="primary" disableElevation variant="contained" fullWidth type="submit">
-					Submit
+					{isLoading ? (
+						<>
+							<Loader type="Puff" color="#fff" height={20} width={20} />
+						</>
+					) : (
+						'Submit'
+					)}
 				</Button>
+				{emailReposne.success ? (
+					<Typography variant="body1" color="inherit">
+						{emailReposne.text}
+					</Typography>
+				) : (
+					<Typography variant="body1" color="error">
+						{emailReposne.text}
+					</Typography>
+				)}
 			</form>
 		</div>
 	);
