@@ -1,0 +1,26 @@
+.contactWrapper {
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.textWrapper {
+	margin: 4rem 0;
+	width: 90%;
+	max-width: 500px;
+	& > p {
+		margin: 2.5rem 0;
+	}
+}
+.formContainer,
+.textWrapper {
+	width: 90%;
+	max-width: 500px;
+}
+
+.formContainer {
+	margin: 0 0 5rem;
+}

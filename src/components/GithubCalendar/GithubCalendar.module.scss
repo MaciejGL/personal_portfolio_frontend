@@ -1,8 +1,12 @@
 .calendar {
-	margin: 3rem auto 0;
+	margin: 3rem auto 4rem;
 	width: 90%;
 	max-width: 800px;
 	& svg {
 		width: 100%;
+	}
+	@media (min-width: 960px) {
+		padding: 2rem 3rem 0 3rem;
+		box-shadow: var(--paper-box-shadow-3);
 	}
 }

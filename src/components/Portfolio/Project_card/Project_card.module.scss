@@ -13,6 +13,9 @@
 	margin-top: auto;
 	display: flex;
 	justify-content: flex-end;
+	& > a {
+		margin: 10px 10px 0;
+	}
 }
 
 .latest_projects {

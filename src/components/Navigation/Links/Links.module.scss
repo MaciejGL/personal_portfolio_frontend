@@ -16,7 +16,7 @@
 	}
 
 	&:hover {
-		color: var(--primary-color);
+		color: var(--contrast);
 	}
 
 	@media (min-width: 960px) {
@@ -30,7 +30,7 @@
 	padding-top: 100px;
 	color: rgb(88, 88, 88);
 	.activeLink {
-		color: var(--primary-color);
+		color: var(--contrast);
 	}
 	@media (min-width: 960px) {
 		padding: 0;

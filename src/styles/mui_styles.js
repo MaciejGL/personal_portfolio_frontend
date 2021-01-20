@@ -67,16 +67,15 @@ export const useStyles_Homepage = makeStyles((theme) => ({
 }));
 
 export const useStyles_Project_card = makeStyles((theme) => ({
-	details: {
-		margin: '20px 0 0',
-	},
+	details: {},
 	project_card_title: {
 		margin: '20px 0',
 	},
 	project_card_short_description: {
 		paddingBottom: '20px',
 		maxHeight: '170px',
-		overflowY: 'scroll',
+		textOverflow: 'ellipsis',
+		overflow: 'hidden',
 	},
 }));
 
@@ -121,5 +120,15 @@ export const useStyles_Project = makeStyles((theme) => ({
 	description_paragraph: {
 		margin: '10px 0',
 		maxWidth: '700px',
+	},
+}));
+
+export const useStyles_ContactForm = makeStyles((theme) => ({
+	input: {
+		'&.MuiFormControl-root': {
+			margin: '1rem 0',
+			backgroundColor: '#fff',
+			borderRadius: '4px',
+		},
 	},
 }));

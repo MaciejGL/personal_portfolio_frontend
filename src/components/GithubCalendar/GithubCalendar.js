@@ -1,3 +1,4 @@
+import { Paper } from '@material-ui/core';
 import React from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import ReactTooltip from 'react-tooltip';
