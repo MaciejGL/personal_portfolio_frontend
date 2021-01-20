@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // Components
 import { Button, Typography, Paper } from '@material-ui/core';
+import { WebAssetOutlined, CallMadeOutlined, LanguageOutlined, DescriptionOutlined } from '@material-ui/icons';
 
 // Styles
 import classes from './Project_card.module.scss';
@@ -24,13 +25,13 @@ const Project_card = ({ data, shadow }) => {
 			</Typography>
 			<div className={classes.actions_container}>
 				<Link to={`/portfolio/${data.title}`}>
-					<Button variant="text" color="primary" className={classes_Mui.details}>
+					<Button endIcon={<DescriptionOutlined />} variant="text" disableElevation color="primary" className={classes_Mui.details}>
 						Details
 					</Button>
 				</Link>
 
 				<a href={data.live_preview} target="_blank" rel="noreferrer">
-					<Button variant="text" color="primary" className={classes_Mui.details}>
+					<Button endIcon={<WebAssetOutlined />} variant="text" disableElevation color="primary" className={classes_Mui.details}>
 						Live
 					</Button>
 				</a>

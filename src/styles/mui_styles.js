@@ -67,9 +67,7 @@ export const useStyles_Homepage = makeStyles((theme) => ({
 }));
 
 export const useStyles_Project_card = makeStyles((theme) => ({
-	details: {
-		margin: '20px 0 0',
-	},
+	details: {},
 	project_card_title: {
 		margin: '20px 0',
 	},
@@ -121,5 +119,13 @@ export const useStyles_Project = makeStyles((theme) => ({
 	description_paragraph: {
 		margin: '10px 0',
 		maxWidth: '700px',
+	},
+}));
+
+export const useStyles_ContactForm = makeStyles((theme) => ({
+	input: {
+		margin: '1rem 0',
+		backgroundColor: '#fff',
+		borderRadius: '4px',
 	},
 }));

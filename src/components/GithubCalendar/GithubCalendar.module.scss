@@ -2,7 +2,12 @@
 	margin: 3rem auto 0;
 	width: 90%;
 	max-width: 800px;
+	// border: 1px solid black;
 	& svg {
 		width: 100%;
+	}
+	@media (min-width: 960px) {
+		padding: 2rem 3rem 0 3rem;
+		box-shadow: var(--paper-box-shadow-3);
 	}
 }
