@@ -1,7 +1,12 @@
 .section_container {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 4rem;
 	width: 90%;
-	max-width: 1050px;
+	max-width: 400px;
+	@media (min-width: 960px) {
+		max-width: 1000px;
+	}
 }
 .projects_container {
 	display: flex;
@@ -12,14 +17,27 @@
 		justify-content: space-between;
 		flex-direction: row;
 		flex-wrap: wrap;
-		align-items: flex-start;
+		align-items: stretch;
+		align-content: space-between;
 		& > div {
-			width: 49%;
+			width: 30%;
 		}
 	}
 }
 .heading {
 	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
+	flex-direction: column;
+	margin: 0 0 2rem 0;
+}
+
+.link {
+	font-weight: 700;
+	text-decoration: underline;
+}
+.linkToPortfolio {
+	width: 100%;
+	margin: 2rem 0 0 auto;
+	@media (min-width: 960px) {
+		width: 30%;
+	}
 }

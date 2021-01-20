@@ -13,6 +13,7 @@
 }
 
 .vertical_timeline {
+	max-width: 1000px;
 	margin: 0;
 	&::before {
 		// vertical line
@@ -25,9 +26,10 @@
 .vertical_timeline_element {
 	max-width: 600px;
 	@media (min-width: 1170px) {
-		max-width: none;
+		max-width: 1000px;
 	}
 	& > div {
+		// max-width: 400px;
 		// card
 		box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
 		// box-shadow: none;
@@ -46,7 +48,6 @@
 	height: 50px;
 	margin-left: -5px;
 	background-color: #fff;
-	// background-color: var(--contrast);
 	border: 1px solid var(--contrast);
 	// stupid boxshadow around icons on vertical line
 	box-shadow: none;

@@ -18,9 +18,6 @@ const About_me = () => {
 			</div>
 			<div className={classes.summary_container}>
 				<Typography className={classes_Mui.paragraph} variant="body1">
-					I'm 30-year-old Fullstack Javascript Developer from Oslo
-				</Typography>
-				<Typography className={classes_Mui.paragraph} variant="body1">
 					Working with teams, focusing on goals, implementing new ideas and consistant development is what motivates me and gives me most joy. Prior experience
 					of work in stressful environments at a high pace comes well along with new skills and challenges I might be faced.
 				</Typography>

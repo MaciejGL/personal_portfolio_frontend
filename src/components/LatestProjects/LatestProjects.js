@@ -9,11 +9,10 @@ import Project_card from '../Portfolio/Project_card/Project_card';
 
 // Styles
 import classes from './LatestProjects.module.scss';
-import { useStyles_Project_card } from '../../styles/mui_styles';
 
 const query = graphql`
 	{
-		allStrapiProject(sort: { order: DESC, fields: production_date }, limit: 2) {
+		allStrapiProject(sort: { order: DESC, fields: production_date }, limit: 3) {
 			edges {
 				node {
 					id
@@ -30,22 +29,33 @@ const query = graphql`
 `;
 
 const LatestProjects = ({ title }) => {
-	const classes_Mui = useStyles_Project_card();
 	const { allStrapiProject } = useStaticQuery(query);
 
 	return (
 		<section className={classes.section_container}>
 			<div className={classes.heading}>
-				<Typography variant="h2">{title}</Typography>
-				<Button variant="text" endIcon={<FastForward />} className={classes_Mui.visit_portfolio_btn}>
-					<Link to={`/portfolio`}>Portfolio</Link>
-				</Button>
+				<div>
+					<Typography variant="h2" component="h1">
+						{title}
+					</Typography>
+					<Typography variant="body1">
+						Check out my recent projects or take a look at the full list of my{' '}
+						<Link to={`/portfolio`}>
+							<span className={classes.link}>Portfolio</span>
+						</Link>
+					</Typography>
+				</div>
 			</div>
 			<div className={classes.projects_container}>
 				{allStrapiProject.edges.map(({ node }) => (
 					<Project_card key={node.id} shadow data={node} />
 				))}
 			</div>
+			<Link className={classes.linkToPortfolio} to={`/portfolio`}>
+				<Button variant="contained" color="secondary" disableElevation endIcon={<FastForward />} fullWidth>
+					All Projects
+				</Button>
+			</Link>
 		</section>
 	);
 };
