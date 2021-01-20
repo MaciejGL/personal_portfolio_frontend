@@ -13,7 +13,6 @@ const portfolio = () => {
 			<SEO title="Portfolio" article="Portfolio" />
 			<Timeline />
 			<GithubCalendar />
-			<InTouch />
 		</Layout>
 	);
 };

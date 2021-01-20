@@ -74,7 +74,8 @@ export const useStyles_Project_card = makeStyles((theme) => ({
 	project_card_short_description: {
 		paddingBottom: '20px',
 		maxHeight: '170px',
-		overflowY: 'scroll',
+		textOverflow: 'ellipsis',
+		overflow: 'hidden',
 	},
 }));
 

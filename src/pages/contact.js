@@ -14,21 +14,21 @@ const contact = () => {
 	return (
 		<Layout>
 			<SEO title="Contact" article="Contact" />
-			<div className={classes.contactWrapper}>
-				<section className={classes.textWrapper}>
+			<section className={classes.contactWrapper}>
+				<article className={classes.textWrapper}>
 					<Typography variant="h2" component="h1">
 						Contact
 					</Typography>
 					<Typography variant="body1">
-						If You have any question or want to stay in touch, You will be able to reach me through social media or classic contact form.
+						If You have any question or want to stay in touch, You will be able to reach me through social media or old fashioned contact form.
 					</Typography>
 					<SocialMedia line />
-				</section>
+				</article>
 
-				<section className={classes.formContainer}>
+				<article className={classes.formContainer}>
 					<ContactForm />
-				</section>
-			</div>
+				</article>
+			</section>
 		</Layout>
 	);
 };
