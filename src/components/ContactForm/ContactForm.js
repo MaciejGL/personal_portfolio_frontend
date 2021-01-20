@@ -5,7 +5,6 @@ import axios from 'axios';
 
 // Components
 import { TextField, Button, Typography } from '@material-ui/core';
-import Loader from 'react-loader-spinner';
 
 // Styles
 import classes from './ContactForm.module.scss';
@@ -36,12 +35,16 @@ const ContactForm = () => {
 		onSubmit: async (values, { resetForm }) => {
 			setIsLoading(true);
 			const emailData = formatEmail(values);
-			const { status } = await axios.post(`${process.env.CMS_URL}/email`, emailData);
-			status === 200
-				? setEmailResponse({ success: true, text: 'Email has been sent. I will reply as soon as possible.' })
-				: setEmailResponse({ success: false, text: 'Oops something went wrong. Please try again' });
-			setIsLoading(false);
-			resetForm({});
+			try {
+				const { status } = await axios.post(`${process.env.CMS_URL}/email`, emailData);
+				status === 200 && setEmailResponse({ success: true, text: 'Email has been sent. I will reply as soon as possible.' });
+
+				setIsLoading(false);
+				resetForm({});
+			} catch (error) {
+				setEmailResponse({ success: false, text: 'Oops something went wrong. Please try again' });
+				setIsLoading(false);
+			}
 		},
 	});
 
@@ -75,14 +78,9 @@ const ContactForm = () => {
 					helperText={formik.touched.message && formik.errors.message}
 				/>
 				<Button color="primary" disableElevation variant="contained" fullWidth type="submit">
-					{isLoading ? (
-						<>
-							<Loader type="Puff" color="#fff" height={20} width={20} />
-						</>
-					) : (
-						'Submit'
-					)}
+					{isLoading ? 'Sending' : 'Submit'}
 				</Button>
+
 				{emailReposne.success ? (
 					<Typography variant="body1" color="inherit">
 						{emailReposne.text}
