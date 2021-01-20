@@ -36,7 +36,7 @@ const ContactForm = () => {
 			setIsLoading(true);
 			const emailData = formatEmail(values);
 			try {
-				const { status } = await axios.post(`email`, emailData);
+				const { status } = await axios.post(`${process.env.CMS_URL}/email`, emailData);
 				status === 200 && setEmailResponse({ success: true, text: 'Email has been sent. I will reply as soon as possible.' });
 
 				setIsLoading(false);
