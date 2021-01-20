@@ -36,8 +36,7 @@ const ContactForm = () => {
 			setIsLoading(true);
 			const emailData = formatEmail(values);
 			try {
-				console.log(`${process.env.CMS_URL}/email`);
-				const { status } = await axios.post(process.env.CMS_URL + '/email', emailData);
+				const { status } = await axios.post('https://personal-portfolio-maciej.herokuapp.com/email', emailData);
 				status === 200 && setEmailResponse({ success: true, text: 'Email has been sent. I will reply as soon as possible.' });
 
 				setIsLoading(false);
