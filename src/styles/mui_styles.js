@@ -125,8 +125,10 @@ export const useStyles_Project = makeStyles((theme) => ({
 
 export const useStyles_ContactForm = makeStyles((theme) => ({
 	input: {
-		margin: '1rem 0',
-		backgroundColor: '#fff',
-		borderRadius: '4px',
+		'&.MuiFormControl-root': {
+			margin: '1rem 0',
+			backgroundColor: '#fff',
+			borderRadius: '4px',
+		},
 	},
 }));
