@@ -12,7 +12,12 @@ const Project = ({ data }) => {
 	const { strapiProject: project } = data;
 	return (
 		<Layout>
-			<SEO title={project.title} description={project.short_description} image={project.image_full.publicURL} article={'article'} />
+			<SEO
+				title={project.title}
+				description={project.short_description}
+				image={project.image_full ? project.image_full.publicURL : project.image_devices.publicURL}
+				article={'article'}
+			/>
 			<Description project={project} />
 			{project.image_devices && <Image_full publicURL={project.image_devices.publicURL} title={project.title} maxWidth="1000px" />}
 
