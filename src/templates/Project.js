@@ -14,11 +14,11 @@ const Project = ({ data }) => {
 		<Layout>
 			<SEO title={project.title} description={project.short_description} image={project.image_full.publicURL} article={'article'} />
 			<Description project={project} />
-			<Image_full publicURL={project.image_devices.publicURL} title={project.title} maxWidth="1000px" />
+			{project.image_devices && <Image_full publicURL={project.image_devices.publicURL} title={project.title} maxWidth="1000px" />}
 
 			{project.problemAndSolution && <Details title="Problem & Solution" data={project.problemAndSolution} />}
 			{project.stackExplanation && <Details title="Stack Explanation" data={project.stackExplanation} stack={project.stack} />}
-			<Image_full publicURL={project.image_full.publicURL} title={project.title} shadow={3} />
+			{project.image_full && <Image_full publicURL={project.image_full.publicURL} title={project.title} shadow={3} />}
 			{project.thoughtsAndImprovements && <Details title="Thoughts and Future Improvements" data={project.thoughtsAndImprovements} />}
 			<LatestProjects title="Other Projects" />
 		</Layout>
