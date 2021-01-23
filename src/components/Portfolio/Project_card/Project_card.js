@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // Components
 import { Button, Typography, Paper } from '@material-ui/core';
-import { WebAssetOutlined, CallMadeOutlined, LanguageOutlined, DescriptionOutlined } from '@material-ui/icons';
+import { WebAssetOutlined, DescriptionOutlined } from '@material-ui/icons';
 
 // Styles
 import classes from './Project_card.module.scss';
