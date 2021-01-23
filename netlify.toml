@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/cors-proxy/*"
-  to = ":splat"
+  from = "/api/*"
+  to = "https://personal-portfolio-maciej.herokuapp.com/:splat"
   status = 200
   force = true
 
