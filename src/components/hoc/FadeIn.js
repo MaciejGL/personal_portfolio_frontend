@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const FadeIn = ({ children, delay, duration, parent }) => (
-	<ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={delay} dration={duration || 1}>
+const FadeIn = ({ children, delay, duration, arrowUp }) => (
+	<ScrollAnimation
+		animateIn={arrowUp ? 'animate__fadeInUp' : 'animate__fadeIn'}
+		animateOut={arrowUp && 'animate__fadeInDown'}
+		animateOnce
+		delay={delay}
+		duration={duration || 1}
+	>
 		{children}
 	</ScrollAnimation>
 );

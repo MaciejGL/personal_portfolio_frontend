@@ -15,11 +15,6 @@ export const useStyles_Footer = makeStyles((theme) => ({
 	footer_typography: {
 		color: theme.palette.accent.main,
 	},
-	btn_scroll_top: {
-		display: 'flex',
-		flexDirection: 'column',
-		alignItems: 'center',
-	},
 }));
 
 export const useStyles_Homepage = makeStyles((theme) => ({

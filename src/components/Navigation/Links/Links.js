@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 // Components
 import { Apps, ContactMail, Home } from '@material-ui/icons';
