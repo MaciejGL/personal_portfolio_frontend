@@ -14,7 +14,7 @@ const TechStack = () => {
 	const classes_Mui = useStyles_Homepage();
 	const { allStrapiStackFrontends, allStrapiStackBackends, allStrapiStackTools } = useStaticQuery(graphql`
 		query MyQuery {
-			allStrapiStackFrontends {
+			allStrapiStackFrontends(sort: { fields: [order], order: ASC }) {
 				nodes {
 					name
 					iconClass
@@ -23,7 +23,7 @@ const TechStack = () => {
 					}
 				}
 			}
-			allStrapiStackBackends {
+			allStrapiStackBackends(sort: { fields: [order], order: ASC }) {
 				nodes {
 					name
 					iconClass
@@ -33,7 +33,7 @@ const TechStack = () => {
 				}
 			}
 
-			allStrapiStackTools {
+			allStrapiStackTools(sort: { fields: [order], order: ASC }) {
 				nodes {
 					name
 					iconClass
