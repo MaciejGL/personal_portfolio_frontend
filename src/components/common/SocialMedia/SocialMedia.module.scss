@@ -7,8 +7,11 @@
 	margin-right: 20px;
 	height: 2px;
 	width: 144px;
-	max-width: 144px;
 	background-color: var(--text-secondary-color);
+}
+
+.line_fade_in {
+	animation: stretchTheLine 1s 2s both;
 }
 
 .icon_container {
@@ -24,5 +27,35 @@
 		font-size: 30px;
 		color: var(--text-secondary-color);
 		transition: 0.2s ease-in-out;
+	}
+}
+
+.icon_fade_in {
+	animation: showIcons 1s both;
+	&:nth-child(2) {
+		animation-delay: 3s;
+	}
+	&:nth-child(3) {
+		animation-delay: 3.2s;
+	}
+	&:nth-child(4) {
+		animation-delay: 3.4s;
+	}
+}
+
+@keyframes stretchTheLine {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 144px;
+	}
+}
+@keyframes showIcons {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

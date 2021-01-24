@@ -41,7 +41,7 @@ const LatestProjects = ({ title }) => {
 					<Typography variant="body1">
 						Check out my recent projects or take a look at the full list of my{' '}
 						<Link to={`/portfolio`}>
-							<span className={classes.link}>Portfolio</span>
+							<span className={[classes.link, 'contrast'].join(' ')}>Portfolio</span>
 						</Link>
 					</Typography>
 				</div>

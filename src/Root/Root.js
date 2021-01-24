@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../styles/index.scss';
+import 'animate.css/animate.min.css';
 
 //ThemeProvider
 import { ThemeProvider } from '@material-ui/styles';

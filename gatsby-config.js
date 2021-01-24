@@ -46,6 +46,7 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		`gatsby-plugin-smoothscroll`,
 		'gatsby-plugin-netlify',
+		`gatsby-plugin-transition-link`,
 		{
 			resolve: 'gatsby-source-strapi',
 			options: {
