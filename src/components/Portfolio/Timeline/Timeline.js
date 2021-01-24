@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 // Components
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import Icon from '../../common/Icon/Icon';
-import Project_card from '../Project_card/Project_card';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 // Styles
 import 'react-vertical-timeline-component/style.min.css';
@@ -47,7 +47,7 @@ const Timeline = () => {
 			iconClassName={classes.timeline_icon}
 			icon={<Icon path={project.node.icon_main_tech.publicURL} alt={project.node.title} />}
 		>
-			<Project_card data={project.node} />
+			<ProjectCard data={project.node} />
 		</VerticalTimelineElement>
 	));
 	return (

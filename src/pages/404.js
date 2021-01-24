@@ -10,18 +10,16 @@ import { Button } from '@material-ui/core';
 import { ArrowLeft } from '@material-ui/icons';
 
 // markup
-const NotFoundPage = () => {
-	return (
-		<Layout>
-			<SEO title="404" article="Website" />
-			<div style={{ marginTop: '10rem', maxWidth: '600px' }}>
-				<Lottie animation={animationJSON} />
-			</div>
-			<Link to={'/'}>
-				<Button startIcon={<ArrowLeft />}>Go back to homepage</Button>
-			</Link>
-		</Layout>
-	);
-};
+const NotFoundPage = () => (
+	<Layout>
+		<SEO title="404" article="Website" />
+		<div style={{ marginTop: '10rem', maxWidth: '600px' }}>
+			<Lottie animation={animationJSON} />
+		</div>
+		<Link to={'/'}>
+			<Button startIcon={<ArrowLeft />}>Go back to homepage</Button>
+		</Link>
+	</Layout>
+);
 
 export default NotFoundPage;
