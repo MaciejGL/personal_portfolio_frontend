@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 // Components
 import { Apps, ContactMail, Home } from '@material-ui/icons';
 import { Typography, useMediaQuery, useTheme, Divider } from '@material-ui/core';
-
+import LinkCustom from './FadeLink';
 // Styles
 import classes from './Links.module.scss';
 
@@ -33,13 +34,13 @@ const Links = ({ handleDrawer }) => {
 	return (
 		<div className={classes.container}>
 			{links.map((el) => (
-				<Link key={el.title} to={el.path} activeClassName={classes.activeLink} onClick={() => handleDrawer && handleDrawer(false)}>
+				<LinkCustom key={el.title} url={el.path} lenght={10} onClick={() => handleDrawer && handleDrawer(false)}>
 					<div className={classes['inner_text']}>
 						{matches && el.icon}
 						<Typography variant="subtitle1">{el.title}</Typography>
 					</div>
 					{matches && <Divider />}
-				</Link>
+				</LinkCustom>
 			))}
 		</div>
 	);
