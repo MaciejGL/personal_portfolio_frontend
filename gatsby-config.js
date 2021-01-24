@@ -46,14 +46,7 @@ module.exports = {
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-sass',
 		'gatsby-plugin-react-helmet',
-		'gatsby-transformer-remark',
 		`gatsby-plugin-smoothscroll`,
-		{
-			resolve: 'gatsby-transformer-remark',
-			options: {
-				plugins: ['gatsby-remark-lottie'],
-			},
-		},
 		{
 			resolve: 'gatsby-source-strapi',
 			options: {

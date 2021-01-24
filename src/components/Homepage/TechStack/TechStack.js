@@ -8,51 +8,52 @@ import StackColumn from './StackColumn';
 // Styles
 import { useStyles_Homepage } from '../../../styles/mui_styles';
 
+const query = graphql`
+	query MyQuery {
+		allStrapiStackFrontends(sort: { fields: [order], order: ASC }) {
+			nodes {
+				name
+				iconClass
+				img {
+					publicURL
+				}
+			}
+		}
+		allStrapiStackBackends(sort: { fields: [order], order: ASC }) {
+			nodes {
+				name
+				iconClass
+				img {
+					publicURL
+				}
+			}
+		}
+
+		allStrapiStackTools(sort: { fields: [order], order: ASC }) {
+			nodes {
+				name
+				iconClass
+				img {
+					publicURL
+				}
+			}
+		}
+	}
+`;
 const TechStack = () => {
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 	const classes_Mui = useStyles_Homepage();
-	const { allStrapiStackFrontends, allStrapiStackBackends, allStrapiStackTools } = useStaticQuery(graphql`
-		query MyQuery {
-			allStrapiStackFrontends(sort: { fields: [order], order: ASC }) {
-				nodes {
-					name
-					iconClass
-					img {
-						publicURL
-					}
-				}
-			}
-			allStrapiStackBackends(sort: { fields: [order], order: ASC }) {
-				nodes {
-					name
-					iconClass
-					img {
-						publicURL
-					}
-				}
-			}
-
-			allStrapiStackTools(sort: { fields: [order], order: ASC }) {
-				nodes {
-					name
-					iconClass
-					img {
-						publicURL
-					}
-				}
-			}
-		}
-	`);
+	const { allStrapiStackFrontends, allStrapiStackBackends, allStrapiStackTools } = useStaticQuery(query);
 
 	const context = {
-		frontend: { title: 'Frontend', text: `Frontend lured me into coding. That's how I became addicted to code.`, topBadge: 'devicon-javascript-plain colored' },
+		frontend: { title: 'Frontend', text: `Frontend lured me into coding and that's my preferrable tech stack.`, topBadge: 'devicon-javascript-plain colored' },
 		backend: {
 			title: 'Backend',
-			text: `Willing to undarstand how full lifecycle of apps work pushed me to learn the dark side of coding :)`,
+			text: `Willing to understand how full lifecycle of apps work pushed me to discover the dark side of coding :)`,
 			topBadge: 'devicon-nodejs-plain colored',
 		},
-		tools: { title: 'Tools', text: `There are so many tools. But anyway I will list few I'm familair with.`, topBadge: 'devicon-git-plain colored' },
+		tools: { title: 'Tools', text: `There are so many tools. But those I managed to work with so far.`, topBadge: 'devicon-git-plain colored' },
 	};
 
 	return matches ? (

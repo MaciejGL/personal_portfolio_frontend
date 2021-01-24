@@ -12,6 +12,9 @@
 }
 
 .icon_container {
+	&:hover svg {
+		color: var(--contrast);
+	}
 	& a {
 		padding: 0 15px;
 		text-align: center;
@@ -20,5 +23,6 @@
 		vertical-align: middle;
 		font-size: 30px;
 		color: var(--text-secondary-color);
+		transition: 0.2s ease-in-out;
 	}
 }
