@@ -91,19 +91,14 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-plugin-google-gtag`,
+			resolve: `gatsby-plugin-gtag`,
 			options: {
-				trackingIds: [
-					'G-SYMZ01VC2B', // Google Analytics / GA
-				],
-				gtagConfig: {
-					optimize_id: 'OPT_CONTAINER_ID',
-					anonymize_ip: true,
-					cookie_expires: 0,
-				},
-				pluginConfig: {
-					head: true,
-				},
+				// your google analytics tracking id
+				trackingId: `G-SYMZ01VC2B`,
+				// Puts tracking script in the head instead of the body
+				head: false,
+				// enable ip anonymization
+				anonymize: true,
 			},
 		},
 	],

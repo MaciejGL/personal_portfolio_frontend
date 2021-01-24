@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 // Components
 import { Button, Typography, Paper } from '@material-ui/core';
 import { WebAssetOutlined, DescriptionOutlined } from '@material-ui/icons';
+import FadeLink from '../../Navigation/Links/FadeLink';
 
 // Styles
 import classes from './ProjectCard.module.scss';
@@ -24,11 +24,11 @@ const ProjectCard = ({ data, shadow }) => {
 				{data.short_description}
 			</Typography>
 			<div className={classes.actions_container}>
-				<Link to={`/portfolio/${data.title}`}>
+				<FadeLink url={`/portfolio/${data.title}`}>
 					<Button endIcon={<DescriptionOutlined />} variant="text" disableElevation color="primary" className={classes_Mui.details}>
 						Details
 					</Button>
-				</Link>
+				</FadeLink>
 
 				<a href={data.live_preview} target="_blank" rel="noreferrer">
 					<Button endIcon={<WebAssetOutlined />} variant="text" disableElevation color="primary" className={classes_Mui.details}>
