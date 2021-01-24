@@ -45,7 +45,7 @@ const SEO = ({ title, description, image, article }) => {
 			<meta property="og:description" content={seo.description} />
 			<meta property="og:image" content={seo.image} />
 			<meta property="og:image:alt" content={seo.description}></meta>
-
+			<link rel="preconnect" />
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.8.2/devicon.min.css" />
 		</Helmet>
 	);

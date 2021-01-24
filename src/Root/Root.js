@@ -1,7 +1,6 @@
 import React from 'react';
 
 import '../styles/index.scss';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import 'animate.css/animate.min.css';
 
 //ThemeProvider

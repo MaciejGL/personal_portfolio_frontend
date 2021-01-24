@@ -55,7 +55,7 @@ const ContactForm = () => {
 					helperText={formik.touched.message && formik.errors.message}
 				/>
 				<Button color="primary" disableElevation variant="contained" fullWidth type="submit">
-					{isLoading ? 'Sending' : 'Submit'}
+					{isLoading ? 'Sending...' : 'Submit'}
 				</Button>
 
 				{emailReposne.success ? (
