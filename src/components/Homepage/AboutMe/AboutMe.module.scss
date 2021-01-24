@@ -41,6 +41,10 @@
 	animation: blobby 15s linear infinite alternate forwards;
 }
 
+.rounded_image {
+	border-radius: 50%;
+}
+
 @keyframes blobby {
 	0%,
 	100% {

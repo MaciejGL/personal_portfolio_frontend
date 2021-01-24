@@ -2,7 +2,7 @@ import React from 'react';
 
 // Components
 import { Typography } from '@material-ui/core';
-import ProfilePicture from '../../../images/profile_rounded.png';
+import ProfilePicture from '../../../images/profile_rounded.jpeg';
 
 // Styles
 import classes from './AboutMe.module.scss';
@@ -14,7 +14,7 @@ const AboutMe = () => {
 		<div className={classes.about_me_container} id="about_me">
 			<div className={classes.picture_holder}>
 				<div className={classes.blob}></div>
-				<img src={ProfilePicture} alt="Maciej Glowacki Profile" />
+				<img className={classes.rounded_image} src={ProfilePicture} alt="Maciej Glowacki Profile" />
 			</div>
 			<div className={classes.summary_container}>
 				<Typography className={classes_Mui.paragraph} variant="body1">

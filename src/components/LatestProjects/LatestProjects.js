@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // Components
 import { Button, Typography } from '@material-ui/core';
 import { FastForward } from '@material-ui/icons';
-import Project_card from '../Portfolio/Project_card/Project_card';
+import ProjectCard from '../Portfolio/ProjectCard/ProjectCard';
 
 // Styles
 import classes from './LatestProjects.module.scss';
@@ -48,7 +48,7 @@ const LatestProjects = ({ title }) => {
 			</div>
 			<div className={classes.projects_container}>
 				{allStrapiProject.edges.map(({ node }) => (
-					<Project_card key={node.id} shadow data={node} />
+					<ProjectCard key={node.id} shadow data={node} />
 				))}
 			</div>
 			<Link className={classes.linkToPortfolio} to={`/portfolio`}>

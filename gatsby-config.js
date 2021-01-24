@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
 	siteMetadata: {
 		title: 'Maciej Glowacki - Portfolio',
-		description: 'Personal Portfolio - Maciej Mats Glowacki. Fullstack Javascript Developer. Developer from Poland, currently live in Norway, Oslo.',
+		description: 'Personal Portfolio - Maciej Glowacki. Fullstack Javascript Developer. Developer from Poland, currently live in Norway, Oslo.',
 		keywords: [
 			'React',
 			'Gatsby',
@@ -21,8 +21,8 @@ module.exports = {
 			'Norway',
 			'Oslo',
 		],
-		url: 'https://nervous-goodall-0e0adc.netlify.app',
-		image: '/images/profile_rounded.png',
+		url: 'https://maciej-dev.com',
+		image: '/images/portfolio_frame.jpg',
 
 		lang: `en`,
 	},
