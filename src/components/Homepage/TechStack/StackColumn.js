@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 // Components
 import { Typography } from '@material-ui/core';
-import Badge from './Badge';
+import Badge from '../../common/Badge/Badge';
 
 // Styles
-import classes from './Badge.module.scss';
+import classes from './TechStack.module.scss';
 import { useStyles_Homepage } from '../../../styles/mui_styles';
 
-const Badge_column = ({ nodes, context }) => {
+const StackColumn = ({ nodes, context }) => {
 	const classes_Mui = useStyles_Homepage();
 	const badgeGenerator = (arr, Comp) => arr.map((el) => <Comp key={el.name} badge={el} />);
 
@@ -30,9 +30,9 @@ const Badge_column = ({ nodes, context }) => {
 	);
 };
 
-Badge_column.propTypes = {
+StackColumn.propTypes = {
 	nodes: PropTypes.array.isRequired,
 	context: PropTypes.object.isRequired,
 };
 
-export default Badge_column;
+export default StackColumn;

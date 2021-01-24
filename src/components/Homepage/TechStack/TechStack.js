@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 // Components
 import { Divider, Paper, useMediaQuery, useTheme } from '@material-ui/core';
-import Badge_column from './Badge_column';
+import StackColumn from './StackColumn';
 
 // Styles
 import { useStyles_Homepage } from '../../../styles/mui_styles';
 
-const Badges_container = () => {
+const TechStack = () => {
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 	const classes_Mui = useStyles_Homepage();
@@ -58,24 +58,24 @@ const Badges_container = () => {
 	return matches ? (
 		<Paper elevation={0} className={classes_Mui.display_sm}>
 			<Paper elevation={1} className={classes_Mui.containerSM}>
-				<Badge_column nodes={allStrapiStackFrontends.nodes} context={context.frontend} />
+				<StackColumn nodes={allStrapiStackFrontends.nodes} context={context.frontend} />
 			</Paper>
 			<Paper elevation={1} className={classes_Mui.containerSM}>
-				<Badge_column nodes={allStrapiStackBackends.nodes} context={context.backend} />
+				<StackColumn nodes={allStrapiStackBackends.nodes} context={context.backend} />
 			</Paper>
 			<Paper elevation={1} className={classes_Mui.containerSM}>
-				<Badge_column nodes={allStrapiStackTools.nodes} context={context.tools} />
+				<StackColumn nodes={allStrapiStackTools.nodes} context={context.tools} />
 			</Paper>
 		</Paper>
 	) : (
 		<Paper elevation={1} className={classes_Mui.display_big}>
-			<Badge_column nodes={allStrapiStackFrontends.nodes} context={context.frontend} />
+			<StackColumn nodes={allStrapiStackFrontends.nodes} context={context.frontend} />
 			<Divider flexItem orientation="vertical" />
-			<Badge_column nodes={allStrapiStackBackends.nodes} context={context.backend} />
+			<StackColumn nodes={allStrapiStackBackends.nodes} context={context.backend} />
 			<Divider flexItem orientation="vertical" />
-			<Badge_column nodes={allStrapiStackTools.nodes} context={context.tools} />
+			<StackColumn nodes={allStrapiStackTools.nodes} context={context.tools} />
 		</Paper>
 	);
 };
 
-export default Badges_container;
+export default TechStack;

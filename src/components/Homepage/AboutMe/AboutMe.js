@@ -5,10 +5,10 @@ import { Typography } from '@material-ui/core';
 import ProfilePicture from '../../../images/profile_rounded.png';
 
 // Styles
-import classes from './About_me.module.scss';
+import classes from './AboutMe.module.scss';
 import { useStyles_Homepage } from '../../../styles/mui_styles';
 
-const About_me = () => {
+const AboutMe = () => {
 	const classes_Mui = useStyles_Homepage();
 	return (
 		<div className={classes.about_me_container} id="about_me">
@@ -18,16 +18,16 @@ const About_me = () => {
 			</div>
 			<div className={classes.summary_container}>
 				<Typography className={classes_Mui.paragraph} variant="body1">
-					Working with teams, focusing on goals, implementing new ideas and consistant development is what motivates me and gives me most joy. Prior experience
-					of work in stressful environments at a high pace comes well along with new skills and challenges I might be faced.
+					Results-driven Full Stack JavaScript developer graduated from School of Applied Technology. Passionate about developing user-friendly software
+					applications. Recent experience proved me for the importance of being a good team player and focusing on constant progression. Seeking to assist a
+					team to develop their product as full stack JS developer, as well as grow and improve my own skills as a coder.
 				</Typography>
 				<Typography className={classes_Mui.paragraph} variant="body1">
-					During last few years I had a great opportunity to colaborate with many skillfull developers. Projects we're working on boosted my career rapidly and
-					placed me on path of a fullstack developer.
+					Beside programming I'm a passionate Sushi Chef and gamer :)
 				</Typography>
 			</div>
 		</div>
 	);
 };
 
-export default About_me;
+export default AboutMe;
