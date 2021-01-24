@@ -1,7 +1,6 @@
 import React from 'react';
 
 import '../styles/index.scss';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 //ThemeProvider
 import { ThemeProvider } from '@material-ui/styles';

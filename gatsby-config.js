@@ -42,11 +42,10 @@ module.exports = {
 				display: 'swap',
 			},
 		},
-		'gatsby-transformer-sharp',
-		'gatsby-plugin-sharp',
 		'gatsby-plugin-sass',
 		'gatsby-plugin-react-helmet',
 		`gatsby-plugin-smoothscroll`,
+		'gatsby-plugin-netlify',
 		{
 			resolve: 'gatsby-source-strapi',
 			options: {
