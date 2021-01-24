@@ -6,6 +6,7 @@ import laptop_working from '../../assets/laptop-working.json';
 import Lottie from '../../common/Lottie/Lottie';
 import SocialMedia from '../../common/SocialMedia/SocialMedia';
 import { ChevronLeftRounded, ChevronRightRounded } from '@material-ui/icons';
+import FadeIn from '../../hoc/FadeIn';
 
 // Styles
 import classes from './Welcome.module.scss';
@@ -16,21 +17,27 @@ const Welcome = () => {
 
 	return (
 		<div className={classes.welcome_container}>
-			<div className={classes.animation_container}>
-				<Lottie animation={laptop_working} />
-			</div>
+			<FadeIn delay={1500}>
+				<div className={classes.animation_container}>
+					<Lottie animation={laptop_working} />
+				</div>
+			</FadeIn>
 			<div className={classes.text_container}>
 				<div className={classes.background_chevrons}>
 					<ChevronLeftRounded />
 					<ChevronRightRounded />
 				</div>
-				<SocialMedia line />
-				<Typography className={classes_Mui.h3} variant="h3" component="h1">
-					Hi there, I'm Mats.
-				</Typography>
-				<Typography className={classes_Mui.h3} variant="h3" component="h1">
-					Fullstack JavaScript <span className="contrast">Developer</span>
-				</Typography>
+				<SocialMedia line animate />
+				<FadeIn delay={500}>
+					<Typography className={classes_Mui.h3} variant="h3" component="h1">
+						Hi there, I'm Mats.
+					</Typography>
+				</FadeIn>
+				<FadeIn delay={1000}>
+					<Typography className={classes_Mui.h3} variant="h3" component="h1">
+						Fullstack JavaScript <span className="contrast">Developer</span>
+					</Typography>
+				</FadeIn>
 			</div>
 		</div>
 	);

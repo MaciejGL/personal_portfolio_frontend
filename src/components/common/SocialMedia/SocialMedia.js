@@ -7,7 +7,7 @@ import { Facebook, GitHub, LinkedIn } from '@material-ui/icons';
 // Styles
 import classes from './SocialMedia.module.scss';
 
-const SocialMedia = ({ line }) => {
+const SocialMedia = ({ line, animate }) => {
 	const social_components = [
 		{
 			icon: <GitHub />,
@@ -28,10 +28,10 @@ const SocialMedia = ({ line }) => {
 
 	return (
 		<div className={classes.social_media_container}>
-			{line && <div className={classes.line}></div>}
+			{line && <div className={[classes.line, animate && classes.line_fade_in].join(' ')}></div>}
 			{social_components &&
 				social_components.map((el) => (
-					<div key={el.link} className={classes.icon_container}>
+					<div key={el.link} className={[classes.icon_container, animate && classes.icon_fade_in].join(' ')}>
 						<a aria-label={el.label} href={el.link} target="_blank" rel="noreferrer">
 							{el.icon}
 						</a>
@@ -43,6 +43,7 @@ const SocialMedia = ({ line }) => {
 
 SocialMedia.propTypes = {
 	line: PropTypes.bool,
+	animate: PropTypes.bool,
 };
 
 export default SocialMedia;

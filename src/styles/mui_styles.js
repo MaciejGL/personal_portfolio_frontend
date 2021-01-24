@@ -86,8 +86,8 @@ export const useStyles_InTouch = makeStyles((theme) => ({
 	},
 	email: {
 		textDecoration: 'underline',
-		fontWeight: 500,
-		color: theme.palette.primary.main,
+		fontWeight: 600,
+		color: theme.palette.accent.main,
 	},
 }));
 export const useStyles_Project = makeStyles((theme) => ({
