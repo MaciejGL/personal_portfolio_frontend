@@ -97,5 +97,21 @@ module.exports = {
 				crossOrigin: `use-credentials`,
 			},
 		},
+		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+				trackingIds: [
+					'G-SYMZ01VC2B', // Google Analytics / GA
+				],
+				gtagConfig: {
+					optimize_id: 'OPT_CONTAINER_ID',
+					anonymize_ip: true,
+					cookie_expires: 0,
+				},
+				pluginConfig: {
+					head: true,
+				},
+			},
+		},
 	],
 };
