@@ -8,7 +8,7 @@ import classes from './Links.module.scss';
 
 export const LinkFade = ({ children, url, onClick }) => {
 	const exitTransition = {
-		length: 0.5,
+		length: 0.8,
 		zIndex: 2,
 		trigger: ({ node }) => {
 			exitTransition.exitTrigger(node);
@@ -16,7 +16,7 @@ export const LinkFade = ({ children, url, onClick }) => {
 			window.scrollTo({ top: -window.pageYOffset });
 		},
 		exitTrigger: useCallback((container) => {
-			container.setAttribute('style', 'animation: fadeOut 0.8s ease forwards;');
+			container.setAttribute('style', 'animation: fadeDownOut 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;');
 		}, []),
 	};
 
@@ -26,7 +26,7 @@ export const LinkFade = ({ children, url, onClick }) => {
 			entryTransition.entryTrigger(node);
 		},
 		entryTrigger: useCallback((container) => {
-			container.setAttribute('style', 'animation: fadeIn 0.8s ease forwards;');
+			container.setAttribute('style', 'animation: fadeDownIn 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;');
 		}, []),
 	};
 

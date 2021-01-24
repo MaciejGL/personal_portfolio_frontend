@@ -66,20 +66,22 @@ span.contrast {
 	color: var(--contrast);
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
+/* LINK FADE DOWN */
+
+@keyframes fadeDownOut {
 	to {
-		opacity: 1;
+		margin-top: 200px;
+		opacity: 0;
 	}
 }
 
-@keyframes fadeOut {
+@keyframes fadeDownIn {
 	from {
-		opacity: 1;
+		margin-top: -200px;
+		opacity: 0;
 	}
 	to {
-		opacity: 0;
+		margin-top: 0;
+		opacity: 1;
 	}
 }
