@@ -47,6 +47,7 @@ module.exports = {
 		'gatsby-plugin-sass',
 		'gatsby-plugin-react-helmet',
 		`gatsby-plugin-smoothscroll`,
+		`gatsby-plugin-transition-link`,
 		{
 			resolve: 'gatsby-source-strapi',
 			options: {

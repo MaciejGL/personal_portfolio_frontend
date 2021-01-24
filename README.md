@@ -1,48 +1,32 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Personal Portfolio
 
-## 🚀 Quick start
+Providing a personal portfolio as a web developer, it's a mandatory. Therefore, I've decided to create a new one based on my current skill level. I choose to go with JAM stack to accelerate a production and have a full control of the content. This project was developed to present most recent skills and show off in details projects I have made.
 
-1.  **Create a Gatsby site.**
+## Problem & Solution:
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+How to make easy managable website like a blog with fast rendering and proper SEO?
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Choice was simple, Gatsby with Strapi! It makes it easy to produce an webapp where You can provide dynamic content without diving into code.
 
-2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+## Stack Explanation
+### Frontend: 
+#### ```Gatsby GraphQL```
+### Backend
+#### ```Strapi MongoDB```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+The fundamental reason why I have decided to go for this stack was mostly because I want to practise more Gatsby and use most of features they provided. Additionally I utilized the power of server side rendering.
 
-3.  **Open the code and start customizing!**
+Strapi with MongoDB provide an easy accessible content management to me. I don't need to worry about a code anymore since everything is being fetched from REST API.
 
-    Your site is now running at http://localhost:8000!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## Thoughts and Future Improvements
 
-4.  **Learn more**
+First at all I super happily to see a nicely working web app which shows all content I desire to show. It gives me motivation to go for another iteration and continuous improvements.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+The next step will be to adjust little stylings to create better user experience as well as probably enhancing app into a kind of personal Blog. For now I'll put more focus on utilizing ALL of the unique features Gatsby is providing.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Live
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+https://maciej-dev.netlify.app/
