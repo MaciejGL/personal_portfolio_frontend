@@ -7,10 +7,10 @@ import { Button, Typography, Paper } from '@material-ui/core';
 import { WebAssetOutlined, DescriptionOutlined } from '@material-ui/icons';
 
 // Styles
-import classes from './Project_card.module.scss';
+import classes from './ProjectCard.module.scss';
 import { useStyles_Project_card } from '../../../styles/mui_styles';
 
-const Project_card = ({ data, shadow }) => {
+const ProjectCard = ({ data, shadow }) => {
 	const classes_Mui = useStyles_Project_card();
 	return (
 		<div className={shadow ? [classes.project_card_container, classes.latest_projects].join(' ') : classes.project_card_container}>
@@ -40,7 +40,7 @@ const Project_card = ({ data, shadow }) => {
 	);
 };
 
-Project_card.propTypes = {
+ProjectCard.propTypes = {
 	data: PropTypes.shape({
 		image_card: PropTypes.objectOf(PropTypes.string.isRequired),
 		title: PropTypes.string.isRequired,
@@ -50,4 +50,4 @@ Project_card.propTypes = {
 	shadow: PropTypes.bool,
 };
 
-export default Project_card;
+export default ProjectCard;

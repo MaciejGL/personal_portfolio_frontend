@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // Components
 import { Button, Typography } from '@material-ui/core';
 import { FastForward } from '@material-ui/icons';
-import Project_card from '../Portfolio/Project_card/Project_card';
+import ProjectCard from '../Portfolio/ProjectCard/ProjectCard';
 
 // Styles
 import classes from './LatestProjects.module.scss';
@@ -41,14 +41,14 @@ const LatestProjects = ({ title }) => {
 					<Typography variant="body1">
 						Check out my recent projects or take a look at the full list of my{' '}
 						<Link to={`/portfolio`}>
-							<span className={classes.link}>Portfolio</span>
+							<span className={[classes.link, 'contrast'].join(' ')}>Portfolio</span>
 						</Link>
 					</Typography>
 				</div>
 			</div>
 			<div className={classes.projects_container}>
 				{allStrapiProject.edges.map(({ node }) => (
-					<Project_card key={node.id} shadow data={node} />
+					<ProjectCard key={node.id} shadow data={node} />
 				))}
 			</div>
 			<Link className={classes.linkToPortfolio} to={`/portfolio`}>

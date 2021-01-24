@@ -65,3 +65,23 @@ p {
 span.contrast {
 	color: var(--contrast);
 }
+
+/* LINK FADE DOWN */
+
+@keyframes fadeDownOut {
+	to {
+		margin-top: 200px;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeDownIn {
+	from {
+		margin-top: -200px;
+		opacity: 0;
+	}
+	to {
+		margin-top: 0;
+		opacity: 1;
+	}
+}

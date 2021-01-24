@@ -2,7 +2,7 @@ import React from 'react';
 
 // Components
 import { Typography } from '@material-ui/core';
-import Badge from '../../Homepage/Badge/Badge';
+import Badge from '../../common/Badge/Badge';
 
 // Styles
 import { useStyles_Project } from '../../../styles/mui_styles';
