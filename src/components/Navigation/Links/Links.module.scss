@@ -1,10 +1,23 @@
 .inner_text {
 	position: relative;
-	display: flex;
+	display: none;
 	align-items: center;
 	padding: 1rem 1rem 1rem 2rem;
 	font-weight: 300;
 	transition: 0.2s;
+	&_mobile {
+		@extend .inner_text;
+		display: flex;
+		@media (min-width: 960px) {
+			display: none;
+		}
+	}
+	&_desktop {
+		@extend .inner_text;
+		@media (min-width: 960px) {
+			display: flex;
+		}
+	}
 	& > svg {
 		margin-right: 1rem;
 		font-size: 1.2rem;
