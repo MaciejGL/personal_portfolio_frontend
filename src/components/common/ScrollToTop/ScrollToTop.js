@@ -18,7 +18,7 @@ const ScrollToTop = () => {
 		}
 	});
 	return (
-		<button className={[classes.btn, showButton && classes.show].join(' ')} onClick={() => scrollTo('#top')}>
+		<button aria-label="Scroll to top" className={[classes.btn, showButton && classes.show].join(' ')} onClick={() => scrollTo('#top')}>
 			<ArrowUpward />
 		</button>
 	);
