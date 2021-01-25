@@ -28,20 +28,22 @@ const Links = ({ handleDrawer }) => {
 			path: '/contact',
 		},
 	];
+	// adding specific classes to prevent flickering on initial load.
+	const createLinks = (classname) =>
+		links.map((el) => (
+			<LinkCustom key={el.title} url={el.path} lenght={10} onClick={() => handleDrawer && handleDrawer(false)}>
+				<div className={classes[classname]}>
+					{matches && el.icon}
+					<Typography variant="subtitle1">{el.title}</Typography>
+				</div>
+				{matches && <Divider />}
+			</LinkCustom>
+		));
 
-	return (
-		<div className={classes.container}>
-			{links.map((el) => (
-				<LinkCustom key={el.title} url={el.path} lenght={10} onClick={() => handleDrawer && handleDrawer(false)}>
-					<div className={classes['inner_text']}>
-						{matches && el.icon}
-						<Typography variant="subtitle1">{el.title}</Typography>
-					</div>
-					{matches && <Divider />}
-				</LinkCustom>
-			))}
-		</div>
-	);
+	const mobileLinks = createLinks('inner_text_mobile');
+	const desktopLinks = createLinks('inner_text_desktop');
+
+	return <div className={classes.container}>{matches ? mobileLinks : desktopLinks}</div>;
 };
 
 Links.propTypes = {
