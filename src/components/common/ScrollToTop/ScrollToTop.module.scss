@@ -19,9 +19,6 @@
 	&.show {
 		animation: show 0.3s both;
 	}
-	&.hide {
-		animation: hide 0.3s both;
-	}
 	&:hover svg {
 		transform: scale(1.2);
 	}
@@ -29,21 +26,6 @@
 	align-items: center;
 }
 
-@keyframes hide {
-	0% {
-		bottom: 0;
-
-		opacity: 1;
-	}
-	99% {
-		opacity: 0;
-		bottom: -100px;
-	}
-	100% {
-		opacity: 0;
-		display: none;
-	}
-}
 @keyframes show {
 	0% {
 		display: flex;

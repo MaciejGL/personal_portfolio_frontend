@@ -16,6 +16,9 @@
 .animation_container {
 	width: 90%;
 	max-width: 500px;
+	@media (max-width: 960px) {
+		margin: 0 auto;
+	}
 }
 
 .text_container {
@@ -34,7 +37,7 @@
 		position: absolute;
 
 		color: var(--text-secondary-color);
-		opacity: 0.05;
+		opacity: 0.1;
 	}
 	& > svg:nth-of-type(1) {
 		left: -80px;

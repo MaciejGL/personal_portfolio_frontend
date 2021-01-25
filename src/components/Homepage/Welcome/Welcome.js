@@ -17,11 +17,11 @@ const Welcome = () => {
 
 	return (
 		<div className={classes.welcome_container}>
-			<FadeIn delay={1500}>
-				<div className={classes.animation_container}>
+			<div className={classes.animation_container}>
+				<FadeIn delay={1500}>
 					<Lottie animation={laptop_working} />
-				</div>
-			</FadeIn>
+				</FadeIn>
+			</div>
 			<div className={classes.text_container}>
 				<div className={classes.background_chevrons}>
 					<ChevronLeftRounded />

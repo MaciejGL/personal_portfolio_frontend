@@ -4,8 +4,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 const FadeIn = ({ children, delay, duration, arrowUp }) => (
 	<ScrollAnimation
-		animateIn={arrowUp ? 'animate__fadeInUp' : 'animate__fadeIn'}
-		animateOut={arrowUp && 'animate__fadeInDown'}
+		animateIn={arrowUp ? 'animate__bounceInUp' : 'animate__fadeIn'}
+		animateOut={arrowUp && 'animate__bounceOutLeft'}
 		animateOnce
 		delay={delay}
 		duration={duration || 1}
